@@ -1,0 +1,13 @@
+---
+title: "О блоге"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com
+
+---
+
+В этом блоге Малютин О.С. отчитывается о своей работе. Начальству на радость, коллегам для интереса, ученикам для вдохновения, всем прочим на память.
