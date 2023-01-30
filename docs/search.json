@@ -11,62 +11,69 @@
     "href": "index.html",
     "title": "Публикации",
     "section": "",
-    "text": "Добро пожаловать в блог!\n\n\n\n\n\n\n\nежедневно\n\n\nянварь 23\n\n\n\n\n\n\n\n\n\n\n\n30 янв. 2023 г.\n\n\nМалютин О.С.\n\n\n\n\n\n\nНет подходящих элементов"
+    "text": "23-01-23: Добро пожаловать в блог!\n\n\n\n\n\n\n\nежедневно\n\n\n23 год январь\n\n\n\n\n\n\n\n\n\n\n\n30 янв. 2023 г.\n\n\nМалютин О.С.\n\n\n\n\n\n\nНет подходящих элементов"
   },
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Добро пожаловать в блог!",
+    "title": "23-01-23: Добро пожаловать в блог!",
     "section": "",
     "text": "30 января 2023, понедельник. Первый день мобнедели."
   },
   {
     "objectID": "posts/welcome/index.html#тестирование-ии-в-сфере-генерации-программного-кода",
     "href": "posts/welcome/index.html#тестирование-ии-в-сфере-генерации-программного-кода",
-    "title": "Добро пожаловать в блог!",
+    "title": "23-01-23: Добро пожаловать в блог!",
     "section": "Тестирование ИИ в сфере генерации программного кода",
     "text": "Тестирование ИИ в сфере генерации программного кода\nПротестировал телеграм-бота Jarvis IT Assistant (ChatGPT) на предмет, сможет ли он написать готовый код для веб приложения под Leaflet.\nЗапрос:\nНапиши код Web-приложения позволяющего рисовать полигоны поверх карты местности на Leflet и вычислять их площадь\nОтвет:\n<html>\n  <head>\n    <title>Polygon Area Calculator</title>\n    <script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\" />\n  </head>\n\n  <body>\n    <div id=\"mapid\" style=\"width: 600px; height: 400px;\"></div>\n\n    <script type=\"text/javascript\">\n\n      // Create the map and set its view to the coordinates of your choice\n      var mymap = L.map('mapid').setView([51.505, -0.09], 13);\n\n      // Add a tile layer to the map (e.g., OpenStreetMap)\n      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors' }).addTo(mymap);\n\n      // Create an empty array to store the polygon points in\n      var polygonPoints = [];\n\n      // Create a marker for each point clicked on the map and add it to the array of points\n      mymap.on('click', function(e) {\n\n        var marker = L.marker(e.latlng).addTo(mymap);\n        polygonPoints.push(marker);\n\n        // If there are at least 3 points in the array, draw a polygon on the map using those points and calculate its area in square meters\n        if (polygonPoints && polygonPoints[2]) {\n\n          var polygon = L.polygon(polygonPoints).addTo(mymap);\n\n          var areaInMeters = Leflet.GeometryUtil.geodesicArea(polygonPoints);\n\n          alert(\"The area of this polygon is \" + areaInMeters + \" square meters.\"); \n\n        }  \n\n      });  \n\n    </script>  \n  </body>  \n</html>\nПолученный код будучи перемещенным в html документ показывает Leflet карту в районе Лондона.\n\nНа карте по клику мыши размещаются маркеры. Однако, при размещении 3-х маркеров их соединение в полигон не происходит, расчет площади, соответсвенно, тоже. К тому же используется устаревшая версия библиотеки Leflet (1.6.0 против вышедшей 1.9.3).\nПосле прописывания ссылок на 1.9.3 полигон стал формироваться, но добиться расчета площади так и не удалось.\n\n<html>\n  <head>\n    <title>Polygon Area Calculator</title>\n    <script src=\"https://unpkg.com/leaflet@1.9.3/dist/leaflet.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.9.3/dist/leaflet.css\" />\n  </head>\n\n  <body>\n    <div id=\"mapid\" style=\"width: 600px; height: 400px;\"></div>\n\n    <script type=\"text/javascript\">\n\n      // Create the map and set its view to the coordinates of your choice\n      var mymap = L.map('mapid').setView([51.505, -0.09], 13);\n\n      // Add a tile layer to the map (e.g., OpenStreetMap)\n      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors' }).addTo(mymap);\n\n      // Create an empty array to store the polygon points in\n      var polygonPoints = [];\n\n      // Create a marker for each point clicked on the map and add it to the array of points\n      mymap.on('click', function(e) {\n\n        var marker = L.marker(e.latlng).addTo(mymap);\n        // polygonPoints.push(marker);\n        polygonPoints.push(e.latlng);\n\n        // If there are at least 3 points in the array, draw a polygon on the map using those points and calculate its area in square meters\n        if (polygonPoints && polygonPoints[2]) {\n\n          var polygon = L.polygon(polygonPoints).addTo(mymap);\n\n          mymap.fitBounds(polygon.getBounds());\n\n        var areaInMeters = L.GeometryUtil.geodesicArea(polygon);\n\n        alert(\"The area of this polygon is \" + areaInMeters + \" square meters.\"); \n\n        }  \n\n      });  \n\n    </script>  \n  </body>  \n</html>\nВ целом опыт получения кода при помощи Jarvis IT Assistant (ChatGPT) можно признать удачным, т.к. на написание кода с нуля ушло бы сильно больше времени нежели его генерация при помощи ИИ."
   },
   {
     "objectID": "posts/welcome/index.html#тестовый-плагин-для-qgis",
     "href": "posts/welcome/index.html#тестовый-плагин-для-qgis",
-    "title": "Добро пожаловать в блог!",
+    "title": "23-01-23: Добро пожаловать в блог!",
     "section": "Тестовый плагин для QGIS",
     "text": "Тестовый плагин для QGIS\nВ рамках НИР Дислокация 2023 было проведено тестирование инструментария QGIS по созданию пользовательских плагинов.\n\n\n\nСодержимое папки сплагином\n\n\n\n\n\nПримерный путь установки\n\n\nВ целом выяснилось что задача создания плагинов относительно проста и доступна для дальнейшей работы. Сложность вызвало только создание файла ресурсов.\nКод (поместить в bat-файл):\n@echo off\ncall \"C:\\Program Files\\QGIS 3.16\\bin\\o4w_env.bat\"\ncall \"C:\\Program Files\\QGIS 3.16\\bin\\qt5_env.bat\"\ncall \"C:\\Program Files\\QGIS 3.16\\bin\\py3_env.bat\"\n\n@echo on\npyrcc5 -o resources.py resources.qrc"
   },
   {
     "objectID": "posts/welcome/index.html#фото-в-личное-дело",
     "href": "posts/welcome/index.html#фото-в-личное-дело",
-    "title": "Добро пожаловать в блог!",
+    "title": "23-01-23: Добро пожаловать в блог!",
     "section": "Фото в личное дело",
     "text": "Фото в личное дело\nНапечатаны и переданы в отдел кадров фотографии для нового удостоверения."
   },
   {
     "objectID": "posts/welcome/index.html#заказ-табличек-на-кабинеты",
     "href": "posts/welcome/index.html#заказ-табличек-на-кабинеты",
-    "title": "Добро пожаловать в блог!",
+    "title": "23-01-23: Добро пожаловать в блог!",
     "section": "Заказ табличек на кабинеты",
     "text": "Заказ табличек на кабинеты\nВ типографии “Город мастеров” заказаны новые таблички для кабинетов."
   },
   {
     "objectID": "posts/welcome/index.html#установка-фотозоны-в-библиотеке",
     "href": "posts/welcome/index.html#установка-фотозоны-в-библиотеке",
-    "title": "Добро пожаловать в блог!",
+    "title": "23-01-23: Добро пожаловать в блог!",
     "section": "Установка фотозоны в библиотеке",
     "text": "Установка фотозоны в библиотеке\nВ библиотеке развернута фотозона для кабинета интерактивных занятий."
   },
   {
     "objectID": "posts/welcome/index.html#подготовка-к-провыерке-го",
     "href": "posts/welcome/index.html#подготовка-к-провыерке-го",
-    "title": "Добро пожаловать в блог!",
+    "title": "23-01-23: Добро пожаловать в блог!",
     "section": "Подготовка к провыерке ГО",
     "text": "Подготовка к провыерке ГО\nОбновлена табличка на противогазе, проверена комплектность сумки ГО."
   },
   {
     "objectID": "posts/welcome/index.html#отчет-по-нир-ии-2022",
     "href": "posts/welcome/index.html#отчет-по-нир-ии-2022",
-    "title": "Добро пожаловать в блог!",
+    "title": "23-01-23: Добро пожаловать в блог!",
     "section": "Отчет по НИР ИИ 2022",
     "text": "Отчет по НИР ИИ 2022\nНапечатан экземпляр отчета по НИР Искусственный интеллект 2022 для хранения в НТЦ."
+  },
+  {
+    "objectID": "posts/welcome/index.html#страницы-на-github-и-генерация-блога-quarto",
+    "href": "posts/welcome/index.html#страницы-на-github-и-генерация-блога-quarto",
+    "title": "23-01-23: Добро пожаловать в блог!",
+    "section": "Страницы на GitHub и генерация блога Quarto",
+    "text": "Страницы на GitHub и генерация блога Quarto\nПротестировано создание публичного сайта на GitHub Pages. При помощи инстнрументов Quarto сгенерирован блог и опубликован на сервисе GitHub Pages."
   }
 ]
