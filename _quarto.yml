@@ -1,0 +1,18 @@
+project:
+  type: website
+
+website:
+  title: "Обсидиановый дневник"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+lang: ru
+
+
+
