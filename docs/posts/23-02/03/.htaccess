@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Protected Area"
-AuthUserFile docs/posts/23-02/03/.htpasswd
-Require valid-user
