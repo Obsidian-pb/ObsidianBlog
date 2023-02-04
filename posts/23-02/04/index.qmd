@@ -1,0 +1,61 @@
+---
+title: "4 февраля 2023"
+author: "Малютин О.С."
+date: "2023-02-04"
+categories: [ежедневно, 2023 февраль]
+image: "index.png"
+execute:
+  eval: false
+---
+
+# Ежедневный отчет
+## Обстановка
+4 февраля 2023, суббота. 
+
+## Получение графа из слоя QGIS
+Пытался программно, при помощи Python получить граф из слоя QGIS. Это нужно для того, чтобы иметь возможность проводить расчеты для дорог нарисованных непосредственно на карте. pyQGIS располагает такими инстурментами но пока непонятно как они работают.
+
+Код смотрел в документации -- https://qgis.lt/docs/pyqgis_developer_cookbook/network_analysis.html
+
+```{python}
+from qgis.core import *
+from qgis.gui import *
+from qgis.analysis import *
+from qgis.PyQt.QtCore import *
+from qgis.PyQt.QtGui import *
+
+vectorLayer = QgsVectorLayer('testdata/network.gpkg|layername=network_lines', 'lines')
+director = QgsVectorLayerDirector(vectorLayer, -1, '', '', '', QgsVectorLayerDirector.DirectionBoth)
+strategy = QgsNetworkDistanceStrategy()
+director.addStrategy(strategy)
+builder = QgsGraphBuilder(vectorLayer.crs())
+
+pStart = QgsPointXY(1179661.925139,5419188.074362)
+tiedPoint = director.makeGraph(builder, [pStart])
+pStart = tiedPoint[0]
+
+graph = builder.graph()
+
+idStart = graph.findVertex(pStart)
+
+tree = QgsGraphAnalyzer.shortestTree(graph, idStart, 0)
+
+i = 0
+while (i < tree.edgeCount()):
+  rb = QgsRubberBand(iface.mapCanvas())
+  rb.setColor (Qt.red)
+  rb.addPoint (tree.vertex(tree.edge(i).fromVertex()).point())
+  rb.addPoint (tree.vertex(tree.edge(i).toVertex()).point())
+  i = i + 1
+```
+
+Однако почему-то не работет. Возможные причины:
+
+1. Не правильно читается файл geopackge
+2. Нужно как-то по другому указывать координаты стартовой точки (а может быть вообще можно обойтись без нее)
+
+Думаю нужно попробовать продолжить в отдельном редакторе Python (не в среде QGIS), а то я даже посмотреть не могу какие данные получены.
+
+## Репозиторий библиотеки genesis
+
+Завел специальный приватный репозиторий для проекта библиотеки genesis. Эта библиотека позволит объединить все подходы к определению пространственных параметров пожарно-спасательных подразделений. 
