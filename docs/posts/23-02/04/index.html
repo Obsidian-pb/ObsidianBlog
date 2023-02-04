@@ -122,6 +122,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Найти"
   }
 }</script>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -244,6 +247,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Нужно как-то по другому указывать координаты стартовой точки (а может быть вообще можно обойтись без нее)</li>
 </ol>
 <p>Думаю нужно попробовать продолжить в отдельном редакторе Python (не в среде QGIS), а то я даже посмотреть не могу какие данные получены.</p>
+</section>
+<section id="репозиторий-библиотеки-genesis" class="level2">
+<h2 class="anchored" data-anchor-id="репозиторий-библиотеки-genesis">Репозиторий библиотеки genesis</h2>
+<p>Завел специальный приватный репозиторий для проекта библиотеки genesis. Эта библиотека позволит объединить все подходы к определению пространственных параметров пожарно-спасательных подразделений.</p>
+</section>
+<section id="инструменты-mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="инструменты-mermaid">Инструменты Mermaid</h2>
+<p>Уже под конец дня неожиданно открыл для себя библиотеку (авторы пишут просто - tool) Mermaid. Она встроена в Quarto, я и раньше видел ее, но сегодня немного глубже копнул и обнаружил, что она очень многое может. Например такое:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
 
 
 </section>
