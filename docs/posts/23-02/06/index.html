@@ -230,13 +230,13 @@ author:
 </div>
 <p>Ссылки:</p>
 <ul>
-<li>Сайт Obsidian: https://obsidian.md/</li>
-<li>Сайт документации Obsidian: https://help.obsidian.md/</li>
+<li>Сайт Obsidian: <a href="https://obsidian.md/" class="uri">https://obsidian.md/</a></li>
+<li>Сайт документации Obsidian: <a href="https://help.obsidian.md/" class="uri">https://help.obsidian.md/</a></li>
 <li>Немного статей:
 <ul>
-<li>https://habr.com/ru/company/ru_mts/blog/705572/</li>
-<li>https://habr.com/ru/post/711884/</li>
-<li>https://habr.com/ru/post/712216/</li>
+<li><a href="https://habr.com/ru/company/ru_mts/blog/705572/" class="uri">https://habr.com/ru/company/ru_mts/blog/705572/</a></li>
+<li><a href="https://habr.com/ru/post/711884/" class="uri">https://habr.com/ru/post/711884/</a></li>
+<li><a href="https://habr.com/ru/post/712216/" class="uri">https://habr.com/ru/post/712216/</a></li>
 </ul></li>
 </ul>
 </section>
@@ -252,8 +252,31 @@ author:
 <p></p><figcaption class="figure-caption">Вид заголовка материала для использования ссылок в формате ГОСТ</figcaption><p></p>
 </figure>
 </div>
+<section id="список-авторов-в-фале-.bib" class="level3">
+<h3 class="anchored" data-anchor-id="список-авторов-в-фале-.bib">Список авторов в фале .bib</h3>
+<p>При этом в тексте markdown следует указывать источники через точку с запятой: <code>[@Materov_2018; @Materov_2019_1; @Materov_2019_2]</code></p>
+<p>В таком случае после рендеринга ссылка будет выглядеть следующим образом: <code>[1-3]</code>.</p>
+<p>Также можно через запятую указывать дополнительные сведения, напирмер, ссылку на цитируеммую страницу: <code>[@MaxPain, стр.12]</code>.</p>
+<p>Вывод будет: <code>[1, стр.12]</code></p>
+</section>
+<section id="указание-авторов-в-.bib" class="level3">
+<h3 class="anchored" data-anchor-id="указание-авторов-в-.bib">Указание авторов в .bib</h3>
+<p>Выяснил, что для корректного отображения списка авторов при генерации списка литературы в Quarto следует указывать между именами авторов слово <code>and</code>.</p>
+<pre><code>@Book{Torre2008,
+ author    = "Joe Torre and Tom Verducci",
+ publisher = "Doubleday",
+ title     = "The Yankee Years",
+ year      =  2008,
+ isbn      = "0385527403"
+}</code></pre>
+<p><a href="https://ru.wikipedia.org/wiki/BibTeX">ссылка на краткие пояснения по .bib</a></p>
+</section>
+<section id="доработка-статьи-по-анализу-статистики-прибытия" class="level3">
+<h3 class="anchored" data-anchor-id="доработка-статьи-по-анализу-статистики-прибытия">Доработка статьи по анализу статистики прибытия</h3>
+<p>Добавил в статью про статистику обсуждение результатов, изменил местами формат, кое что подправил.</p>
 
 
+</section>
 </section>
 </section>
 
