@@ -100,7 +100,7 @@ author:
 
 Для этого используются файлы .csl -- Citation Style Language [источник](https://quarto.org/docs/authoring/footnotes-and-citations.html#citation-style).
 
-Скачать можно из репозитория: https://github.com/citation-style-language/styles
+Скачать можно из репозитория: <https://github.com/citation-style-language/styles>
 
 Нужен файл `gost-r-7-0-5-2008-numeric-alphabetical.csl`. Скачиваем его, добавляем в папку с проектм и в заголовке прописываем `csl: gost-r-7-0-5-2008-numeric-alphabetical.csl`.
 
