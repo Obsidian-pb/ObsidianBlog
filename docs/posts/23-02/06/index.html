@@ -8,7 +8,7 @@
 
 <meta name="author" content="Малютин О.С.">
 
-<title>Игры и теория - 3 февраля 2023</title>
+<title>Игры и теория - 6 февраля 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,6 +59,9 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Найти"
   }
 }</script>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -105,10 +108,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">3 февраля 2023</h1>
+<h1 class="title">6 февраля 2023</h1>
   <div class="quarto-categories">
     <div class="quarto-category">ежедневно</div>
     <div class="quarto-category">2023 февраль</div>
+    <div class="quarto-category">mermaid</div>
+    <div class="quarto-category">quarto</div>
+    <div class="quarto-category">genesis</div>
   </div>
   </div>
 
@@ -126,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Дата публикации</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">3 февраля 2023 г.</p>
+      <p class="date">6 февраля 2023 г.</p>
     </div>
   </div>
   
@@ -140,51 +146,112 @@ ul.task-list li input[type="checkbox"] {
 <h1>Ежедневный отчет</h1>
 <section id="обстановка" class="level2">
 <h2 class="anchored" data-anchor-id="обстановка">Обстановка</h2>
-<p>3 февраля 2023, пятница.</p>
+<p>6 февраля 2023, понедельник.</p>
 </section>
-<section id="поиск-ошибки-в-аигс-графис-тактик" class="level2">
-<h2 class="anchored" data-anchor-id="поиск-ошибки-в-аигс-графис-тактик">Поиск ошибки в АИГС ГраФиС-Тактик</h2>
-<p>Пытался решить проблему с появлением ошибки возникающей при попытке добавления фигур совмещнного граыфика на рабочий лист.</p>
-<p><img src="gfs_error.png" class="img-fluid"></p>
-<p>К сожалению найти источник ошибки не удалось. Однако, было установлено, что если не использовать шаблон, а создавать новый документ и к нему подключать трафареты ГраФиС, то ошибка не появляется. Поэтому временным решением будет создать новые шаблоны.</p>
+<section id="работа-над-упорядочением-проектов-git" class="level2">
+<h2 class="anchored" data-anchor-id="работа-над-упорядочением-проектов-git">Работа над упорядочением проектов Git</h2>
+<p>Поскольку проектов, в том числе и по теме разещения ПСЧ, сталос лишком много и в них стало тяжело ориентирвоаться, пришлось реорганизовать папки и перенастроить ссылки в SmartGit.</p>
+<p>Кстати, пользуюсь для управления проектами Git приложением <a href="https://www.syntevo.com/smartgit/" target="_ blank">SmartGit</a>. Сильно упрощает работу, несмотря на то, что небольшие правки можно делать непосредственно в VSC.</p>
 </section>
-<section id="репозиторий-для-нир-дислокация-2023" class="level2">
-<h2 class="anchored" data-anchor-id="репозиторий-для-нир-дислокация-2023">Репозиторий для НИР Дислокация 2023</h2>
-<p>Завел репозиторий под отчет НИР (да и вообще работу). Отправил приглашения.</p>
-<p>https://github.com/Obsidian-pb/dislocation2023</p>
-<p>В этом репозитории создал структуру проекта в формате книги с разбивкой по главам. Идея организации работы заключаетс в том, что всю работу и ее результаты мы будем описывать здесь. Чтобы можно было ознакомиться и поделиться. Кроме того такой формат гораздо нагляднее для демонстрации заказцику и руководству. Итоговые материалы представляются в формате HTML-страниц.</p>
-<div id="fig-nir1" class="quarto-figure quarto-figure-center anchored">
+<section id="выбор-темы-для-доклада-нв-круглый-стол" class="level2">
+<h2 class="anchored" data-anchor-id="выбор-темы-для-доклада-нв-круглый-стол">Выбор темы для доклада нв круглый стол</h2>
+<p>Выбрал предвартиельную тему для доклада на “Круглый стол в области информационных технологий предупреждения и ликвидации пожаров и чрезвычайных ситуаций” <a href="https://cloud.mail.ru/public/UaWQ/pJydH2TMk">Письмо</a></p>
+<p>Оформил заявку в репозитории кандидатской работы, заодно разобрался с тем, как работают ссылки на <a href="https://quarto.org/docs/authoring/variables.html">переменные</a> и <a href="https://quarto.org/docs/authoring/includes.html">включения</a> в Quarto.</p>
+<section id="включения" class="level3">
+<h3 class="anchored" data-anchor-id="включения">Включения</h3>
+<p>Включение это включение одного докмента в текст другого. Выполняется указанием следующего кода:</p>
+<p>{{&lt; include example.qmd &gt;}}</p>
+<p>При помощи включения я организовал работу следующим образом:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+    A[заявка]
+    B[текст доклада]
+    C(статья в диссертации)
+    D(Итоговый доклад)
+    A --&gt; C
+    B --&gt; C
+    B --&gt; D
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="переменные" class="level3">
+<h3 class="anchored" data-anchor-id="переменные">Переменные</h3>
+<p>Переменные – очень удобный инструмент Quarto, позволяющий во всем тексте одновременно вставлять некоторые значения, например, названия организации, программного обеспечения, версии документации и т.д.</p>
+<p>В моем случае, я использовал переменные для указания своих данных и их вставки в итоговый документ.</p>
+<p>Переменные проекта должны храниться в файле <code>_variables.yml</code>:</p>
+<pre><code>academy_name: "ФГБОУ ВО Сибирская пожарно-спасательная академия ГПС МЧС России"
+
+author:
+  name_full: "Малютин Олег Сергеевич"
+  name_short: "Малютин О.С."</code></pre>
+<p>Для вставки переменных в текст статьи исользуется следующий синтаксис: {{&lt; var academy_name &gt;&gt;}}} или {{&lt; var author.name_full &gt;&gt;}}}</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Уведомление
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Использование Python в Qurto не слишком просто, так как требуется устанавливать ряд дополнительных библиотек. При чем это нужно делать даже в том случае, если код Python не выполняется, а просто приведен в блоках кода. Так что видимо для использования Python в Quarto лучше создавать отдельное окружение…</p>
+</div>
+</div>
+</section>
+</section>
+<section id="оргвстреча-с-участниками-нир-дислокация-2023" class="level2">
+<h2 class="anchored" data-anchor-id="оргвстреча-с-участниками-нир-дислокация-2023">Оргвстреча с участниками НИР Дислокация 2023</h2>
+<p>Обсудили вопросы текущей работы с Матеровым Е.Н. и Бабенышевым С.В.:</p>
+<ul>
+<li>текущее состояние публикаций,</li>
+<li>кратко поговорили о подходах к определению мест дислокации за рубежом,</li>
+<li>обсудили возможности Quarto применительно к организаии работы,</li>
+<li>Обсудили структуру рабочих проектов в репозиториях библиотеки <code>genesis</code> и <code>отчета НИР</code>.</li>
+</ul>
+</section>
+<section id="изучение-obsidian" class="level2">
+<h2 class="anchored" data-anchor-id="изучение-obsidian">Изучение Obsidian</h2>
+<p>Немного вник в идеи приложения Obsidian. В двух словах - это редактор заметок схожий с Evernote, основной фичей которого является графовое представление заметок:</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="nir_1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;1: Скрин работы</figcaption><p></p>
+<p><img src="obsidian_graph.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Пример графа в Obsidian</figcaption><p></p>
 </figure>
 </div>
-<p>В проекте создал черновик ТЗ по НИР.</p>
-<div id="fig-nir2" class="quarto-figure quarto-figure-center anchored">
+<p>Ссылки:</p>
+<ul>
+<li>Сайт Obsidian: https://obsidian.md/</li>
+<li>Сайт документации Obsidian: https://help.obsidian.md/</li>
+<li>Немного статей:
+<ul>
+<li>https://habr.com/ru/company/ru_mts/blog/705572/</li>
+<li>https://habr.com/ru/post/711884/</li>
+<li>https://habr.com/ru/post/712216/</li>
+</ul></li>
+</ul>
+</section>
+<section id="разобрался-с-цитированием-источников" class="level2">
+<h2 class="anchored" data-anchor-id="разобрался-с-цитированием-источников">Разобрался с цитированием источников</h2>
+<p>Разобрался с цитированием источников в формате [n] – по ГОСТу.</p>
+<p>Для этого используются файлы .csl – Citation Style Language <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html#citation-style">источник</a>.</p>
+<p>Скачать можно из репозитория: https://github.com/citation-style-language/styles</p>
+<p>Нужен файл <code>gost-r-7-0-5-2008-numeric-alphabetical.csl</code>. Скачиваем его, добавляем в папку с проектм и в заголовке прописываем <code>csl: gost-r-7-0-5-2008-numeric-alphabetical.csl</code>.</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="nir_2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;2: ТЗ на НИР - фрагмент</figcaption><p></p>
+<p><img src="numeric.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Вид заголовка материала для использования ссылок в формате ГОСТ</figcaption><p></p>
 </figure>
 </div>
-<p>Пока не совсем понятно как сделать нормальную нумерацию глав. Сейчас названеи главы (да и вообще любого файла) автоматически включается в новигацию по книге, однако это не слишком удобно в случае с длинными названиями.</p>
-<div id="fig-toc" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="toc.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Рисунок&nbsp;3: Пример слишком длинного названия главы в навигации</figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="литобзор-продолжение" class="level2">
-<h2 class="anchored" data-anchor-id="литобзор-продолжение">Литобзор продолжение</h2>
-<p>Сегодня не занимался, так как много времени потратил на оформление репозитория</p>
-</section>
-<section id="план-перспективного-развития" class="level2">
-<h2 class="anchored" data-anchor-id="план-перспективного-развития">План перспективного развития</h2>
-<p>Подробно расписал подзадачи в рамках плана перспективного развития. Согласовал с П.Осавелюком.</p>
-</section>
-<section id="разговор-по-поводу-автоматизации-пункта-связи-части" class="level2">
-<h2 class="anchored" data-anchor-id="разговор-по-поводу-автоматизации-пункта-связи-части">Разговор по поводу автоматизации пункта связи части</h2>
-<p>Сегодня неожиданно позвонил одногруппник из Кеморово. Сейчас работает в пожаротушении. Проявлял большой интерес к вопросам автоматизации ПСЧ. Говорил, что у них ничего подобного нет, а очень нужно! Сошлись на том, что будем организловывать совместную работу.</p>
 
 
 </section>
