@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Малютин О.С.">
+
+<title>Игры и теория - Технологии искусственного интеллекта: настоящее и будущее</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Поиск не дал результатов",
+    "search-matching-documents-text": "Результаты поиска",
+    "search-copy-link-title": "Скопировать ссылку",
+    "search-hide-matches-text": "Скрыть дополнительные результаты",
+    "search-more-match-text": "дополнительный результат в этом документе",
+    "search-more-matches-text": "дополнительных результата(-ов) в этом документе",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отменить",
+    "search-submit-button-title": "Найти"
+  }
+}</script>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Игры и теория</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html">
+ <span class="menu-text">О блоге</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Obsidian-pb/ObsidianBlog"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Технологии искусственного интеллекта: настоящее и будущее</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">2023 февраль</div>
+    <div class="quarto-category">доклады</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Автор</div>
+    <div class="quarto-title-meta-contents">
+             <p>Малютин О.С. </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Дата публикации</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">7 февраля 2023 г.</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Доклад на день науки 08 февраля 2023.</p>
+<blockquote class="blockquote">
+<p>Цель – познакомить слушателей с самыми интересными и перспективными разработками в области AI.</p>
+</blockquote>
+<section id="технологии-искусственного-интеллекта-настоящее-и-будущее" class="level1">
+<h1>Технологии искусственного интеллекта: настоящее и будущее</h1>
+</section>
+<section id="знакомство" class="level1">
+<h1>Знакомство</h1>
+<p>Цель – рассказать о нашем центре, чем мы занимаемся, какие достижения и разработки.</p>
+<p>2 минуты, 3-4 слайда</p>
+<p>Сказать, что мы сегодня будем рассказывать о том, что беспокоит всех - об AI.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart BT
+  A[Научно-технический центр]
+  B("Отдел информационных 
+  технологий и компьютерного моделирования")
+  C(Научно-исследовательский отдел)
+  D("Отдел прикладных исследований 
+  и инновационных технологий")
+
+  B --&gt; A
+  C --&gt; A
+  D --&gt; A
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>Ранее был филиалом ВНИИ ПО. С 1 января 2009 г. Относится к СибПСА.</p>
+<p>Занимаемся Прикладными научными исследованиями, созданием специального ПО для пожарной охраны и координацией научной деятельности в академии.</p>
+<p>В последнее время среди прочего проявляем интерес и к технологиям ИИ</p>
+</section>
+<section id="ai-кратко" class="level1">
+<h1>AI кратко</h1>
+<p>Искусственный интеллект (англ. artificial intelligence) – это способность компьютера обучаться, принимать решения и выполнять действия, свойственные человеческому интеллекту.</p>
+<p>Кроме того, ИИ — это наука на стыке математики, биологии, психологии, кибернетики и ещё кучи всего. Она изучает технологии, которые позволяют человеку писать «интеллектуальные» программы и учить компьютеры решать задачи самостоятельно.</p>
+<p>Направлений ИИ огромное множество: интеллектуальные вычисления, агентные системы, роевой интеллект.</p>
+<p>Однако в последнее время в информационном поле превалируют такие термины как машинное обучение и нейронные сети. Во многом именно в этих направлениях буквально у нас на глазах происходит настоящий прорыв. И поэтому мы сегодня сосредоточимся в основном на них.</p>
+<p><img src="AI_cant_answer.png" class="img-fluid"></p>
+<section id="что-это-какой-бывает-и-т.д." class="level2">
+<h2 class="anchored" data-anchor-id="что-это-какой-бывает-и-т.д.">Что это, какой бывает и т.д.</h2>
+<p>Обычно различают два типа ИИ:</p>
+<ol type="1">
+<li>Сильный</li>
+<li>Слабый</li>
+</ol>
+<p><img src="https://mgppu.ru/files/galleries/photos/4348dcb2d8ff0c6dd49de51dbb3e4218.jpg" class="img-fluid"></p>
+<section id="сильный-ии" class="level3">
+<h3 class="anchored" data-anchor-id="сильный-ии">Сильный ИИ</h3>
+<p><img src="serl.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p><strong>Сильный</strong> – программа являющаяся не просто моделью разума; она в буквальном смысле слова сама и есть разум, в том же смысле, в котором человеческий разум — это разум.</p>
+</blockquote>
+</section>
+<section id="слабый-ии" class="level3">
+<h3 class="anchored" data-anchor-id="слабый-ии">Слабый ИИ</h3>
+<p>Слабый ИИ – Искусственный интеллект не способный осознавать себя, но при этом способный выполнять отдельные задачи не хуже человека</p>
+<p>Сразу стоит отметить, что на сегодняшний день слабый ИИ выполняет многие возложенные на него задачи заметно лучше чем человек.</p>
+<p>Например, генерировать изображения, анализировать и генерировать изображения, искать скрытые закономерности, оперировать данными, быстро принимать решения (например, играть в шахматы или ГО), и т.д.</p>
+</section>
+</section>
+<section id="история-ai" class="level2">
+<h2 class="anchored" data-anchor-id="история-ai">История AI</h2>
+<p>Развитие ИИ как технологии началось в середине XX века, когда были созданы первые ЭВМ и заложены теоретические основы ИИ в работах Норберта Винера и Алана Тьюринга. Какое то время развитие технологий ИИ шло в направлении совершенствования алгоритмов машинной логики, однако в конце 80-х годов начали появляться теории создания искусственных нейронных сетей – алгоритмов которые имитировали бы работу нейронов человеческого мозга. Некоторое время эти технологии оставались преимущественно теоретическими разработками, но в начале нашего XXI столетия с появлением новых более мощных вычислительных систем они вышли в практическую плоскость и начали завоевывать мир будучи реализованными в виде программного обеспечения.</p>
+</section>
+<section id="что-есть-сейчас" class="level2">
+<h2 class="anchored" data-anchor-id="что-есть-сейчас">Что есть сейчас</h2>
+<p>В наше время уже влияние искусственного интеллекта можно проследить в очень многих аспектах нашей жизни. ИИ помогает экономистам определять эффективность вложений, медикам ставить диагнозы, геологам определять структуры пород, космическим агентствам управлять космическими аппаратами, беседуют с нами как автоответчики, предлагают нам подходящую музыку и помогают искать информацию в интернете.</p>
+<p>Однако, глядя на то, что есть сейчас закрадывается подозрение, что путь ИИ в нашем обществе только начинается.</p>
+</section>
+<section id="наиболее-распространенные-сферы-применения" class="level2">
+<h2 class="anchored" data-anchor-id="наиболее-распространенные-сферы-применения">Наиболее распространенные сферы применения</h2>
+<ul>
+<li>Распознавание речи</li>
+<li>Распознавание жестов</li>
+<li>Распознавание рукописного ввода</li>
+<li>Распознавание образов</li>
+<li>Обработка медиа</li>
+<li>Генерация медиа</li>
+<li>Техническая диагностика</li>
+<li>Медицинская диагностика</li>
+<li>Прогнозирование временных рядов</li>
+<li>Биоинформатика</li>
+<li>Обнаружение мошенничества</li>
+<li>Обнаружение спама</li>
+<li>Категоризация документов</li>
+<li>Биржевой технический анализ</li>
+<li>Финансовый надзор</li>
+<li>Кредитный скоринг</li>
+<li>Прогнозирование ухода клиентов</li>
+<li>Хемоинформатика</li>
+<li>Обучение ранжированию в информационном поиске</li>
+</ul>
+</section>
+</section>
+<section id="генеративный-ai" class="level1">
+<h1>Генеративный AI</h1>
+<section id="midjorney-bluewillow" class="level2">
+<h2 class="anchored" data-anchor-id="midjorney-bluewillow">Midjorney, Bluewillow</h2>
+<p><img src="mj_full.png" class="img-fluid"></p>
+</section>
+<section id="пожарные-автомобили-2030" class="level2">
+<h2 class="anchored" data-anchor-id="пожарные-автомобили-2030">Пожарные автомобили 2030</h2>
+<p><img src="PA.jpg" class="img-fluid"></p>
+</section>
+<section id="пожарный-в-экзоскелете" class="level2">
+<h2 class="anchored" data-anchor-id="пожарный-в-экзоскелете">Пожарный в экзоскелете</h2>
+<p><img src="ff.png" class="img-fluid"></p>
+</section>
+<section id="схема-пожаротушения" class="level2">
+<h2 class="anchored" data-anchor-id="схема-пожаротушения">Схема пожаротушения</h2>
+<p><img src="fd.png" class="img-fluid"></p>
+</section>
+<section id="chatgpt-merlin" class="level2">
+<h2 class="anchored" data-anchor-id="chatgpt-merlin">ChatGPT, Merlin</h2>
+<p><img src="chat_gpt.jpg" class="img-fluid"></p>
+</section>
+<section id="классификация-пожарных-автомобилей" class="level2">
+<h2 class="anchored" data-anchor-id="классификация-пожарных-автомобилей">Классификация пожарных автомобилей</h2>
+<p><img src="PA_types.png" class="img-fluid"></p>
+</section>
+<section id="генерация-программного-кода-jarvis" class="level2">
+<h2 class="anchored" data-anchor-id="генерация-программного-кода-jarvis">Генерация программного кода Jarvis</h2>
+<p><img src="map2.jpg" class="img-fluid"></p>
+</section>
+</section>
+<section id="перспективы-применения-ai-в-пожарной-охране" class="level1">
+<h1>Перспективы применения AI в пожарной охране</h1>
+<ul>
+<li>Голосовая диспетчеризация</li>
+<li>Интеллектуальные обучающие системы для диспетчеров</li>
+<li>Интеллектуальный анализ обстановки с пожарами</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

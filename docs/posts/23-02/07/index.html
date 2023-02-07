@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Малютин О.С.">
+
+<title>Игры и теория - 7 февраля 2023</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Поиск не дал результатов",
+    "search-matching-documents-text": "Результаты поиска",
+    "search-copy-link-title": "Скопировать ссылку",
+    "search-hide-matches-text": "Скрыть дополнительные результаты",
+    "search-more-match-text": "дополнительный результат в этом документе",
+    "search-more-matches-text": "дополнительных результата(-ов) в этом документе",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отменить",
+    "search-submit-button-title": "Найти"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Игры и теория</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html">
+ <span class="menu-text">О блоге</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Obsidian-pb/ObsidianBlog"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#ежедневный-отчет" id="toc-ежедневный-отчет" class="nav-link active" data-scroll-target="#ежедневный-отчет">Ежедневный отчет</a>
+  <ul class="collapse">
+  <li><a href="#обстановка" id="toc-обстановка" class="nav-link" data-scroll-target="#обстановка">Обстановка</a></li>
+  <li><a href="#проверка-орфографии-в-vsc" id="toc-проверка-орфографии-в-vsc" class="nav-link" data-scroll-target="#проверка-орфографии-в-vsc">Проверка орфографии в VSC</a></li>
+  <li><a href="#статья-по-статистике" id="toc-статья-по-статистике" class="nav-link" data-scroll-target="#статья-по-статистике">Статья по статистике</a></li>
+  <li><a href="#доклад-к-выступлению-на-завтра" id="toc-доклад-к-выступлению-на-завтра" class="nav-link" data-scroll-target="#доклад-к-выступлению-на-завтра">Доклад к выступлению на завтра</a>
+  <ul class="collapse">
+  <li><a href="#bluewillow" id="toc-bluewillow" class="nav-link" data-scroll-target="#bluewillow">Bluewillow</a></li>
+  <li><a href="#работа-с-merlin" id="toc-работа-с-merlin" class="nav-link" data-scroll-target="#работа-с-merlin">Работа с Merlin</a></li>
+  <li><a href="#эксперименты-с-tutorai" id="toc-эксперименты-с-tutorai" class="nav-link" data-scroll-target="#эксперименты-с-tutorai">Эксперименты с TutorAI</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">7 февраля 2023</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ежедневно</div>
+    <div class="quarto-category">2023 февраль</div>
+    <div class="quarto-category">quarto</div>
+    <div class="quarto-category">VSC</div>
+    <div class="quarto-category">скорости</div>
+    <div class="quarto-category">AI</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Автор</div>
+    <div class="quarto-title-meta-contents">
+             <p>Малютин О.С. </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Дата публикации</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">7 февраля 2023 г.</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="ежедневный-отчет" class="level1">
+<h1>Ежедневный отчет</h1>
+<section id="обстановка" class="level2">
+<h2 class="anchored" data-anchor-id="обстановка">Обстановка</h2>
+<p>7 февраля 2023, вторник.</p>
+</section>
+<section id="проверка-орфографии-в-vsc" class="level2">
+<h2 class="anchored" data-anchor-id="проверка-орфографии-в-vsc">Проверка орфографии в VSC</h2>
+<p>Разобрался с настройками проверки русской орфографии в Visual Studio Code.</p>
+<p>Использую расширение <code>Code Spell Checker</code> и <code>Russian - Code Spell Checker</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="spellchecker.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Расширения Code Spell Checker и Russian - Code Spell Checker</figcaption><p></p>
+</figure>
+</div>
+<p>Для включения проверки орфографии в файлах .qmd следует использовать команду <code>Spell</code> в нижней правой части экрана и в появившемся окне включить галочку напротив типа файла.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="spell_qmd_use.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Включение проверки для определенного типа файлов</figcaption><p></p>
+</figure>
+</div>
+<p>Выбирать следует использование проверки для Workspace.</p>
+</section>
+<section id="статья-по-статистике" class="level2">
+<h2 class="anchored" data-anchor-id="статья-по-статистике">Статья по статистике</h2>
+<p>Закончил свою часть работы над статьей по статистике скоростей следования пожарных подразделений в РФ. Интересно, что результат во многом перекликается и подтверждается диссертацией Сибирякова (АГПС), в которой анализ скоростей проводился на основе данных полученных при помощи модулей GPS, т.е. иным способом нежели статистические данные.</p>
+<div id="fig-compare" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sibirakov.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Рисунок&nbsp;1: Сравнение данных у Сибирякова (вверху) и у нас (внизу)</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="доклад-к-выступлению-на-завтра" class="level2">
+<h2 class="anchored" data-anchor-id="доклад-к-выступлению-на-завтра">Доклад к выступлению на завтра</h2>
+<p>Написал основную часть доклада к выступлению на дне ученых.</p>
+<p><img src="ff.png" class="img-fluid"></p>
+<p><strong>Технологии искусственного интеллекта: настоящее и будущее</strong>:</p>
+<ol type="1">
+<li><p>Речь пойдет о таких передовых технологиях искусственного интеллекта как ChatGPT и Midjorney и о том, как такие системы могут быть применены в пожарной охране.</p></li>
+<li><p>Будет рассказано о том какой путь прошли технологии искусственного интеллекта, на каком этапе развития они находятся сейчас и куда двигаются.</p></li>
+<li><p>Отдельный упор будет сделан на применении технологий ИИ в сфере техносферной безопасности.</p></li>
+</ol>
+<section id="bluewillow" class="level3">
+<h3 class="anchored" data-anchor-id="bluewillow">Bluewillow</h3>
+<p>Разобрался с сервисом <a href="bluewillow.ai">Bluewillow</a> – аналогом Midjorney.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Пример изображения сгенерированного bluewillow</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="работа-с-merlin" class="level3">
+<h3 class="anchored" data-anchor-id="работа-с-merlin">Работа с Merlin</h3>
+<p>Запрос к Merlin: <code>write report about chatGPT with references</code></p>
+<p>Ответ:</p>
+<blockquote class="blockquote">
+<p>A report on ChatGPT should include an overview of the company, its products and services, its customer base, its competitive advantages, and its financial performance. Additionally, the report should include references to relevant sources such as industry reports, news articles, press releases, and financial documents.</p>
+</blockquote>
+</section>
+<section id="эксперименты-с-tutorai" class="level3">
+<h3 class="anchored" data-anchor-id="эксперименты-с-tutorai">Эксперименты с TutorAI</h3>
+<p>TutorAI – система автоматической генерации обучающего контента построенная с помощью AI. Вопрос создания качественного контента спорный, но вот что она выдала в ответ на запрос <code>Fire Service Modelling</code>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tutorai.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Результат запроса Fire Service Modelling</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
