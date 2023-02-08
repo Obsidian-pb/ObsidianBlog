@@ -1,0 +1,53 @@
+---
+title: "8 февраля 2023"
+author: "Малютин О.С."
+date: "2023-02-08"
+categories: [ежедневно, 2023 февраль, AI]
+image: "index.jpg"
+toc: true
+---
+
+# Ежедневный отчет
+
+## Обстановка
+
+Среда. День ученого.
+
+## Доделал доклад ко дню ученого
+
+Полностью закончил [доклад](https://cloud.mail.ru/public/98Ud/CM8CuDuPX) ко дню ученого. Часть доклада подготовил при помощи ИИ BlueWillow и JarvisGPT.
+
+При помощи JarvisGPT был сгенерирован список из 7 возможных способов применения ИИ в пожарной охране:
+
+> Describe 7 possible ways to use artificial intelligence in fire protection and firefighting
+
+Ответ:
+
+1. **Automated Fire Detection**: AI-powered sensors can detect fires quickly and accurately, allowing firefighters to respond faster and more efficiently.
+
+2. **Automated Fire Suppression**: AI-powered robots can be used to fight fires in hazardous environments, such as chemical plants or oil refineries, where human firefighters cannot safely enter.
+
+3. **Predictive Fire Modeling**: AI algorithms can be used to predict the spread of a fire based on weather conditions, topography, and other factors. This information can help firefighters plan their response more effectively.
+
+4. **Automated Emergency Response**: AI-powered systems can be used to automatically dispatch emergency responders when a fire is detected, allowing for faster response times and better coordination between different agencies.
+
+5. **Smart Building Design**: AI algorithms can be used to design buildings that are more resistant to fire damage, reducing the risk of loss of life and property in the event of a fire. 
+
+6. **Automated Fire Extinguishing**: AI-powered robots can be used to extinguish fires in hazardous environments without putting human lives at risk. 
+
+7. **Automated Fire Investigation**: AI algorithms can be used to analyze evidence from a fire scene and identify potential causes of the blaze, helping investigators determine how it started and who may have been responsible for it.
+
+
+При помощи же BlueWillow сгенерировал изображения к докладу. Например:
+
+> fire officer with smart device investigate fire. 
+
+Получились такие изображения:
+
+![](index.jpg)
+
+![](AI_ff_AI_3.jpg)
+
+При этом выяснил важность постановки корректных задач. Например, на запрос `firefighting with artificial intelligence`, был получен следующи ответ:
+
+![](AI_ff_AI_1.jpg)
