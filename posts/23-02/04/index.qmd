@@ -68,10 +68,10 @@ while (i < tree.edgeCount()):
 gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
-    section Section
+    section Блок 1
     A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
+    Another task     :after a1  , 10d
+    section Блок 2
     Task in sec      :2014-01-12  , 12d
     another task      : 24d
 ```

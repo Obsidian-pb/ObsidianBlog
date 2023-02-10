@@ -1,0 +1,87 @@
+---
+title: "10 февраля 2023"
+author: "Малютин О.С."
+date: "2023-02-10"
+categories: [ежедневно, 2023 февраль, AI]
+image: "index.png"
+toc: true
+---
+
+# Ежедневный отчет
+
+Пятница. Работа над данными от КК, 
+
+```{mermaid}
+gantt
+    title Ход работы
+    dateFormat HH:mm
+    axisFormat %H:%M
+    section Блок 1
+    Обсуждение работы в VSC            :a1, 08:30, 1h
+    Подписание документов            :a2, after a1, 30m
+    Изучение кода mermaid:              :a3, 14:00, 15m
+    Ознакомление с докладной запиской по НИР :a4, 14:30, 15m
+    Направление информации по записке исполнителям и в НТЦ :a5, after a4, 15m
+
+    section Расчет Красноярск
+    Подготовка шаблона документов           :b1, after  a2, 1h
+    Изучение полученных данных    :b2, after b1, 40m
+    Написание проекта отчета      :b3, after b2, 1h
+
+    section Тест для Хлоповских
+    Разработка программной логики   :c1, 15:10, 1h
+
+    section Диссертация
+    План публикаций                 :d1, 13:30, 30m
+```
+
+
+
+# Блок 1. Общая работа
+
+# Обсуждение особенностей организации работы в VSC
+
+Показал Никите как можно эффективно использовать в организации собственной работы инструменты Python, Quarto и VSC.
+
+Например, написание и оформление публикаций при помощи markdown.
+
+## Изучение кода mermaid
+
+Ниже представлен код страницы html позволяющий вставить диаграмму mermaid на страницу.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Here is a mermaid diagram:
+    <pre class="mermaid">
+            graph TD 
+            A[Client] --> B[Load Balancer] 
+            B --> C[Server01] 
+            B --> D[Server02]
+    </pre>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
+```
+
+
+# Блок 2. Расчет Красноярск
+
+## Работа над расчетами для Красноярска
+
+Начал работу над расчетом требуемого количества пожарных подразделений для города Красноярска и одновременно статьи на эту тему. Подготовил структуру материалов и карту.
+
+Данные от Главка получены, но они в виде тесктовых таблиц в Word -- прийдется писать парсер.
+
+![Содержание данных представленых от ГУ по КК](data_raw.png)
