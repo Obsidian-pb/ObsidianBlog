@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Малютин О.С.">
+
+<title>Игры и теория - Создание тестов в PowerPoint</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Поиск не дал результатов",
+    "search-matching-documents-text": "Результаты поиска",
+    "search-copy-link-title": "Скопировать ссылку",
+    "search-hide-matches-text": "Скрыть дополнительные результаты",
+    "search-more-match-text": "дополнительный результат в этом документе",
+    "search-more-matches-text": "дополнительных результата(-ов) в этом документе",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отменить",
+    "search-submit-button-title": "Найти"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Игры и теория</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html">О блоге</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Obsidian-pb/ObsidianBlog"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#задача" id="toc-задача" class="nav-link active" data-scroll-target="#задача">Задача</a></li>
+  <li><a href="#решение" id="toc-решение" class="nav-link" data-scroll-target="#решение">Решение</a></li>
+  <li><a href="#презентация" id="toc-презентация" class="nav-link" data-scroll-target="#презентация">Презентация</a>
+  <ul class="collapse">
+  <li><a href="#создание-презентации" id="toc-создание-презентации" class="nav-link" data-scroll-target="#создание-презентации">Создание презентации</a></li>
+  <li><a href="#настройка-презентации" id="toc-настройка-презентации" class="nav-link" data-scroll-target="#настройка-презентации">Настройка презентации</a></li>
+  </ul></li>
+  <li><a href="#программный-код" id="toc-программный-код" class="nav-link" data-scroll-target="#программный-код">Программный код</a>
+  <ul class="collapse">
+  <li><a href="#включение-инструментов-разработчика" id="toc-включение-инструментов-разработчика" class="nav-link" data-scroll-target="#включение-инструментов-разработчика">Включение инструментов разработчика</a></li>
+  <li><a href="#редактор-vba" id="toc-редактор-vba" class="nav-link" data-scroll-target="#редактор-vba">Редактор VBA</a></li>
+  <li><a href="#макросы-vba" id="toc-макросы-vba" class="nav-link" data-scroll-target="#макросы-vba">Макросы VBA</a>
+  <ul class="collapse">
+  <li><a href="#основные-переменные" id="toc-основные-переменные" class="nav-link" data-scroll-target="#основные-переменные">Основные переменные</a></li>
+  <li><a href="#код-начала-тестирования" id="toc-код-начала-тестирования" class="nav-link" data-scroll-target="#код-начала-тестирования">Код начала тестирования</a></li>
+  <li><a href="#код-реагирования-на-выбор-ответов" id="toc-код-реагирования-на-выбор-ответов" class="nav-link" data-scroll-target="#код-реагирования-на-выбор-ответов">Код реагирования на выбор ответов</a></li>
+  <li><a href="#код-интерпретации-ответов" id="toc-код-интерпретации-ответов" class="nav-link" data-scroll-target="#код-интерпретации-ответов">Код интерпретации ответов</a></li>
+  <li><a href="#код-подведения-итогов" id="toc-код-подведения-итогов" class="nav-link" data-scroll-target="#код-подведения-итогов">Код подведения итогов</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#окончательная-настройка" id="toc-окончательная-настройка" class="nav-link" data-scroll-target="#окончательная-настройка">Окончательная настройка</a>
+  <ul class="collapse">
+  <li><a href="#связывание-элементов-с-кодом" id="toc-связывание-элементов-с-кодом" class="nav-link" data-scroll-target="#связывание-элементов-с-кодом">Связывание элементов с кодом</a></li>
+  <li><a href="#возврат-к-стартовому-слайду" id="toc-возврат-к-стартовому-слайду" class="nav-link" data-scroll-target="#возврат-к-стартовому-слайду">Возврат к стартовому слайду</a></li>
+  <li><a href="#запрет-перехода" id="toc-запрет-перехода" class="nav-link" data-scroll-target="#запрет-перехода">Запрет перехода</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Создание тестов в PowerPoint</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">2023 февраль</div>
+    <div class="quarto-category">VBA</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Автор</div>
+    <div class="quarto-title-meta-contents">
+             <p>Малютин О.С. </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Дата публикации</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">10 февраля 2023 г.</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="задача" class="level1">
+<h1>Задача</h1>
+<p>Требуется создать простой но привлекательно выглядящий тест.</p>
+<p>Суть теста: Тестируемому предлагается ряд вопросов, ответы на которые служат критериями предложения некоторого выбора.</p>
+</section>
+<section id="решение" class="level1">
+<h1>Решение</h1>
+<p>В качестве решения выбрано приложение PowerPoint и язык программирования Visual Basic for Application, встроенный в данное приложение.</p>
+</section>
+<section id="презентация" class="level1">
+<h1>Презентация</h1>
+<p><a href="https://dzen.ru/a/WqJGz3mdnR6LgbIj">Источник информации</a></p>
+<section id="создание-презентации" class="level2">
+<h2 class="anchored" data-anchor-id="создание-презентации">Создание презентации</h2>
+<p>Средствами PowerPoint следует создать новую презентацию. При этом следует обратить внимание, что расширение файла должно быть <code>.pptm</code> или <code>.ppt</code> – в противном случае вы не сможете использовать программный код в презентации.</p>
+</section>
+<section id="настройка-презентации" class="level2">
+<h2 class="anchored" data-anchor-id="настройка-презентации">Настройка презентации</h2>
+<p>Презентация в целом составляется аналогично обычным презентациям (не интерактивным).</p>
+<p>Создается титульный слайд с кнопкой начала тестирования:</p>
+<p><img src="4-1.png" class="img-fluid"></p>
+<p>Создается заключительный слайд для вывода результатов:</p>
+<p><img src="4-2.png" class="img-fluid"></p>
+<p>Наконец, создаются слайды для каждого из вопросов:</p>
+<p><img src="4-3.png" class="img-fluid"></p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Важное уведомление
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Варианты ответов должны быть созданы отдельными фигурами – использование списков или элементов SmartArt невозможно!</p>
+</div>
+</div>
+<p>Для обращения к некоторым элементам слайдов удобнее задать их имена. Для этого следует воспользоваться командой <code>Область выделения</code> вкладки <code>Редактирование</code> ленты <code>Главная</code>.</p>
+<p><img src="4-4.png" class="img-fluid"></p>
+<p>И в дочернем окне <code>Выделение</code> следует указать требуемое имя элемента в котором будет выводиться итог – в данном случае <code>результат</code></p>
+<p><img src="4-5.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="программный-код" class="level1">
+<h1>Программный код</h1>
+<section id="включение-инструментов-разработчика" class="level2">
+<h2 class="anchored" data-anchor-id="включение-инструментов-разработчика">Включение инструментов разработчика</h2>
+<p>По умолчанию инструменты разработчика не активны. Для того, чтобы из активировать следует перейти в меню Файл/Параметры, в появившемся окне выбрать вкладку “Настроить ленту”, далее в правой части окна поставить флажок напротив ленты “Разработчик” в списке лент.</p>
+<p><img src="1-1.png" class="img-fluid"></p>
+<p><img src="1-2.png" class="img-fluid"></p>
+<p><img src="1-3.png" class="img-fluid"></p>
+</section>
+<section id="редактор-vba" class="level2">
+<h2 class="anchored" data-anchor-id="редактор-vba">Редактор VBA</h2>
+<p>Основная программная часть будет писаться при помощи редактора VBA. Для того чтобы открыть его следует перейти на вкладку “Разработчик” и воспользоваться кнопкой “Visual Basic”.</p>
+<p><img src="2-1.png" class="img-fluid"></p>
+</section>
+<section id="макросы-vba" class="level2">
+<h2 class="anchored" data-anchor-id="макросы-vba">Макросы VBA</h2>
+<p>В появившемся окне редактора следует в дочернем окне Project совершить правый щелчок мыши напротив наименования проекта (по умолчанию VBAProject[название презентации]) и выбрать из выпадающего списка команду Insert/Module.</p>
+<p><img src="3-1.png" class="img-fluid"></p>
+<section id="основные-переменные" class="level3">
+<h3 class="anchored" data-anchor-id="основные-переменные">Основные переменные</h3>
+<p>Требуется создать несколько переменных для хранения итогов тестирования. Следующий код необходимо добавить в начале текста программного модуля созданного ранее:</p>
+<pre><code>Option Explicit
+
+Public cnt_1, cnt_2, cnt_3 As Integer</code></pre>
+<p>В данном случае предполагается, что всего возможно три исхода тестирования:</p>
+<ul>
+<li>Специалист техносферной безопасности</li>
+<li>Инженер пожарной безопасности</li>
+<li>Судебный эксперт</li>
+</ul>
+<p>Поэтому объявляется три переменных <code>cnt_1</code>, <code>cnt_2</code>, <code>cnt_3</code>, каждая из которых соответствует одному из вариантов</p>
+</section>
+<section id="код-начала-тестирования" class="level3">
+<h3 class="anchored" data-anchor-id="код-начала-тестирования">Код начала тестирования</h3>
+<p>В начале тестирования должен запускаться программный код который обнулит имеющиеся значения переменных для хранения итогов тестирования.</p>
+<pre><code>Public Sub test_start()
+    cnt_1 = 0
+    cnt_2 = 0
+    cnt_3 = 0
+    
+    clearResultSlide
+    
+    ActivePresentation.SlideShowWindow.View.Next
+End Sub</code></pre>
+<p>Строка <code>ActivePresentation.SlideShowWindow.View.Next</code> выполняет переход к следующему слайду в режиме показа презентации.</p>
+<p>Функция <code>clearResultSlide</code> очищает текст в поле вывода итогов тестирования на последнем слайде:</p>
+<pre><code>Private Sub clearResultSlide()
+' Очищаем текст поля с выводом итоговой информации. Имя фигуры должно быть "результат"
+Dim lastSlide As Slide
+    Set lastSlide = ActivePresentation.Slides.Item(ActivePresentation.Slides.Count)
+    lastSlide.Shapes("результат").TextFrame.TextRange.Text = "   "
+End Sub</code></pre>
+</section>
+<section id="код-реагирования-на-выбор-ответов" class="level3">
+<h3 class="anchored" data-anchor-id="код-реагирования-на-выбор-ответов">Код реагирования на выбор ответов</h3>
+<pre><code>Public Sub is_A()
+    CheckAnswer "A", ActivePresentation.SlideShowWindow.View.Slide.SlideNumber
+    ActivePresentation.SlideShowWindow.View.Next
+End Sub</code></pre>
+<p>Выше приведен пример процедуры которая должна срабатывать при выборе конкретного ответа (в данном случае – ответ под буквой <code>А</code>). Аналогичные процедуры создаются для всех прочих возможных вариантов ответов.</p>
+</section>
+<section id="код-интерпретации-ответов" class="level3">
+<h3 class="anchored" data-anchor-id="код-интерпретации-ответов">Код интерпретации ответов</h3>
+<p>Каждый из ответов может добавить вес одному или нескольким из возможных вариантов. Для определения правил изменения веса служит следующая процедура:</p>
+<pre><code>Private Sub CheckAnswer(ByVal ответ As String, ByVal номерСлайда As Integer)
+Dim вопрос As Integer
+    
+    вопрос = номерСлайда - 1
+    Select Case вопрос
+        Case Is = 1
+            If InStr(1, "*", ответ) &gt; 0 Then cnt_1 = cnt_1 + 1
+            If InStr(1, "*", ответ) &gt; 0 Then cnt_2 = cnt_2 + 1
+            If InStr(1, "B", ответ) &gt; 0 Then cnt_3 = cnt_3 + 1
+        Case Is = 2
+            If InStr(1, "*", ответ) &gt; 0 Then cnt_1 = cnt_1 + 1
+            If InStr(1, "A", ответ) &gt; 0 Then cnt_2 = cnt_2 + 1
+            If InStr(1, "*", ответ) &gt; 0 Then cnt_3 = cnt_3 + 1
+        'Case Is = 3    ' Далее указываются правила для каждого из ответов
+        '    
+    End Select
+End Sub</code></pre>
+<p>В данном конкретном случае, номер вопроса (<code>вопрос</code>) = номер слайда (<code>номерСлайда</code>) - 1, т.к. Имеется титульный слайд не являющийся вопросом.</p>
+<p>В строке <code>If InStr(1, "B,C", ответ) &gt; 0 Then cnt_1 = cnt_1 + 1</code> осуществляется проверка правила. В данном случае если <code>ответ</code> будет равен <code>B</code> или <code>C</code>, то для данного вопроса вес первого параметра <code>cnt_1</code> будет увеличен на единицу. Если ответ будет равен <code>A</code>, то вес первого параметра изменен не будет.</p>
+<p>Таким образом, для каждого из возможных вариантов ответа должна быть задана отдельная строка правила. И тогда для каждого вопроса должен быть написан следующий код (для трех итоговых вариантов):</p>
+<pre><code>If InStr(1, "A,B", ответ) &gt; 0 Then cnt_1 = cnt_1 + 1
+If InStr(1, "D", ответ) &gt; 0 Then cnt_2 = cnt_2 + 1
+If InStr(1, "C", ответ) &gt; 0 Then cnt_3 = cnt_3 + 1</code></pre>
+<p>В описанном выше коде веса первого параметра будут увеличены только в случае ответов <code>A</code> или <code>B</code>, второго – <code>D</code>, третьего – <code>C</code>. В случае, если для какого либо варианта ни один из ответов не увеличивает вес, в качестве возможных вариантов ответа можно указать любой символ не соответствующий букве ответа, например, <code>"*"</code>.</p>
+</section>
+<section id="код-подведения-итогов" class="level3">
+<h3 class="anchored" data-anchor-id="код-подведения-итогов">Код подведения итогов</h3>
+<pre><code>Public Sub TotalCounts()
+' Итоговая функция
+    ' Ответ №1:
+    If cnt_1 &gt; cnt_2 And cnt_1 &gt; cnt_3 Then
+        ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " &amp; _
+            "Вам подходит деятельность Специалиста техносферной безопасности"
+    End If
+    ' Ответ №2:
+    If cnt_2 &gt; cnt_1 And cnt_2 &gt; cnt_3 Then
+        ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " &amp; _
+            "Вам подходит деятельность Инженера пожарной безопасности"
+    End If
+    ' Ответ №3:
+    If cnt_3 &gt; cnt_2 And cnt_3 &gt; cnt_1 Then
+        ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " &amp; _
+            "Вам подходит деятельность Судебного эксперта"
+    End If
+End Sub</code></pre>
+<p>В приведенном коде осуществляется проверка, того, какой из параметров по итогу тестирования имеет наибольший вес. В зависимости от этого в элементе с именем <code>результат</code> отображается соответствующий текст.</p>
+<p>В данном случае осуществляется простое сравнение весов вариантов, но логика может быть и более сложной.</p>
+</section>
+</section>
+</section>
+<section id="окончательная-настройка" class="level1">
+<h1>Окончательная настройка</h1>
+<section id="связывание-элементов-с-кодом" class="level2">
+<h2 class="anchored" data-anchor-id="связывание-элементов-с-кодом">Связывание элементов с кодом</h2>
+<p>Для связывания элементов с кодом применяется команда <code>Действие</code> группы <code>Ссылки</code> ленты <code>Вставка</code>.</p>
+<p><img src="5-1.png" class="img-fluid"></p>
+<p>При запуске команды <code>Действие</code> фигура к которой должно быть применено данное действие должна быть выбрана. При этом выбрана должна быть именно рамка фигуры а не текст в ней, иначе выбранное действие будет применено не ко всей фигуре, а только к выбранному тексту, что неудобно.</p>
+<p>В появившемся окне следует выбрать процедуру которая будет выполняться при щелчке мыши на элементе.</p>
+<p><img src="5-2.png" class="img-fluid"></p>
+<p>Таким образом:</p>
+<ul>
+<li>для фигуры начала тестирования указывается процедура <code>test_start</code></li>
+<li>для фигур ответов указываются процедуры <code>is_A</code>, <code>is_B</code>, <code>is_C</code>, <code>is_D</code></li>
+<li>для фигуры демонстрации результата тестирования (на последнем слайде) указывается процедура <code>TotalCounts</code></li>
+</ul>
+<p>Наименования процедур могут быть иными в зависимости от их наименования в программном коде.</p>
+<p>Настройка фигуры демонстрации результата тестирования выглядит так:</p>
+<p><img src="5-3.png" class="img-fluid"></p>
+</section>
+<section id="возврат-к-стартовому-слайду" class="level2">
+<h2 class="anchored" data-anchor-id="возврат-к-стартовому-слайду">Возврат к стартовому слайду</h2>
+<p>Функцию возврата к стартовому слайду можно реализовать стандартными средствами PowerPoint, без использования программного кода VBA. Для этого следует выбрать фигуру, которая будет служить переходом к стартовому слайду и воспользоваться командой действие. Но в данном случае в окне настройки действия следует выбрать опцию <code>Перейти по гиперссылке</code> и указать <code>Первый слайд</code>.</p>
+<p><img src="5-4.png" class="img-fluid"></p>
+</section>
+<section id="запрет-перехода" class="level2">
+<h2 class="anchored" data-anchor-id="запрет-перехода">Запрет перехода</h2>
+<p>Наконец, стандартно слайды презентации листаются по клику на слайде. В данном случае такое поведение является нежелательным, т.к. тестируемый пользователь получит возможность перемещаться между слайдами не отвечая на вопросы.</p>
+<p>Для предотвращения этого следует снять флаг <code>По щелчку</code> предварительно выбрав в области навигации по презентации все слайды:</p>
+<p><img src="5-5.png" class="img-fluid"></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

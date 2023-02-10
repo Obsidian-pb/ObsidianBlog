@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "техносферной"
+    ],
+    "cSpell.enableFiletypes": [
+        "quarto"
     ]
 }
