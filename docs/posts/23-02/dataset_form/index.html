@@ -8,7 +8,7 @@
 
 <meta name="author" content="Малютин О.С.">
 
-<title>Игры и теория - 10 февраля 2023</title>
+<title>Игры и теория - Подготовка датасета на основе текстовых формализованных данных</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,9 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Найти"
   }
 }</script>
-<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -106,17 +103,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Содержание</h2>
    
   <ul>
-  <li><a href="#ежедневный-отчет" id="toc-ежедневный-отчет" class="nav-link active" data-scroll-target="#ежедневный-отчет">Ежедневный отчет</a></li>
-  <li><a href="#блок-1.-общая-работа" id="toc-блок-1.-общая-работа" class="nav-link" data-scroll-target="#блок-1.-общая-работа">Блок 1. Общая работа</a></li>
-  <li><a href="#обсуждение-особенностей-организации-работы-в-vsc" id="toc-обсуждение-особенностей-организации-работы-в-vsc" class="nav-link" data-scroll-target="#обсуждение-особенностей-организации-работы-в-vsc">Обсуждение особенностей организации работы в VSC</a>
-  <ul class="collapse">
-  <li><a href="#изучение-кода-mermaid" id="toc-изучение-кода-mermaid" class="nav-link" data-scroll-target="#изучение-кода-mermaid">Изучение кода mermaid</a></li>
-  </ul></li>
-  <li><a href="#блок-2.-расчет-красноярск" id="toc-блок-2.-расчет-красноярск" class="nav-link" data-scroll-target="#блок-2.-расчет-красноярск">Блок 2. Расчет Красноярск</a>
-  <ul class="collapse">
-  <li><a href="#работа-над-расчетами-для-красноярска" id="toc-работа-над-расчетами-для-красноярска" class="nav-link" data-scroll-target="#работа-над-расчетами-для-красноярска">Работа над расчетами для Красноярска</a></li>
-  </ul></li>
-  <li><a href="#блок-3" id="toc-блок-3" class="nav-link" data-scroll-target="#блок-3">Блок 3</a></li>
+  <li><a href="#задача" id="toc-задача" class="nav-link active" data-scroll-target="#задача">Задача</a></li>
+  <li><a href="#решение" id="toc-решение" class="nav-link" data-scroll-target="#решение">Решение</a></li>
   </ul>
 </nav>
     </div>
@@ -125,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">10 февраля 2023</h1>
+<h1 class="title">Подготовка датасета на основе текстовых формализованных данных</h1>
   <div class="quarto-categories">
     <div class="quarto-category">ежедневно</div>
     <div class="quarto-category">2023 февраль</div>
@@ -156,99 +144,13 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="ежедневный-отчет" class="level1">
-<h1>Ежедневный отчет</h1>
-<p>Пятница. Работа над данными от КК, разработка теста на PowerPoint.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">gantt
-    title Ход работы
-    dateFormat HH:mm
-    axisFormat %H:%M
-    section Блок 1
-    Обсуждение работы в VSC            :a1, 08:30, 1h
-    Подписание документов            :a2, after a1, 30m
-    Изучение кода mermaid:              :a3, 14:00, 15m
-    Ознакомление с докладной запиской по НИР :a4, 14:30, 15m
-    Направление информации по записке исполнителям и в НТЦ :a5, after a4, 15m
-
-    section Расчет Красноярск
-    Подготовка шаблона документов           :b1, after  a2, 1h
-    Изучение полученных данных    :b2, after b1, 40m
-    Написание проекта отчета      :b3, after b2, 1h
-
-    section Тест для Хлоповских
-    Разработка программной логики   :c1, 15:10, 1h
-    Написание теста                 :c2, 19:00, 2h
-    Написание документации          :с3, after c2, 2h
-
-    section Диссертация
-    План публикаций                 :d1, 13:30, 30m
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
+<section id="задача" class="level1">
+<h1>Задача</h1>
+<p>Требуется подготовить датасет с информацией о пожарах на основе имеющейся текстовой информации. Данные структурированы, но в текстовом виде с ними работать сложно. Поэтому необходимо подготовить данные в формате датасета <code>pandas</code>.</p>
 </section>
-<section id="блок-1.-общая-работа" class="level1">
-<h1>Блок 1. Общая работа</h1>
-</section>
-<section id="обсуждение-особенностей-организации-работы-в-vsc" class="level1">
-<h1>Обсуждение особенностей организации работы в VSC</h1>
-<p>Показал Никите как можно эффективно использовать в организации собственной работы инструменты Python, Quarto и VSC.</p>
-<p>Например, написание и оформление публикаций при помощи markdown.</p>
-<section id="изучение-кода-mermaid" class="level2">
-<h2 class="anchored" data-anchor-id="изучение-кода-mermaid">Изучение кода mermaid</h2>
-<p>Ниже представлен код страницы html позволяющий вставить диаграмму mermaid на страницу.</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    Here is a mermaid diagram:
-    &lt;pre class="mermaid"&gt;
-            graph TD 
-            A[Client] --&gt; B[Load Balancer] 
-            B --&gt; C[Server01] 
-            B --&gt; D[Server02]
-    &lt;/pre&gt;
-
-    &lt;script type="module"&gt;
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</section>
-</section>
-<section id="блок-2.-расчет-красноярск" class="level1">
-<h1>Блок 2. Расчет Красноярск</h1>
-<section id="работа-над-расчетами-для-красноярска" class="level2">
-<h2 class="anchored" data-anchor-id="работа-над-расчетами-для-красноярска">Работа над расчетами для Красноярска</h2>
-<p>Начал работу над расчетом требуемого количества пожарных подразделений для города Красноярска и одновременно статьи на эту тему. Подготовил структуру материалов и карту.</p>
-<p>Данные от Главка получены, но они в виде тесктовых таблиц в Word – прийдется писать парсер.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="data_raw.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Содержание данных представленых от ГУ по КК</figcaption><p></p>
-</figure>
-</div>
-</section>
-</section>
-<section id="блок-3" class="level1">
-<h1>Блок 3</h1>
-<p>Написание теста.</p>
-<p><img src="index.png" class="img-fluid"></p>
-<p>Более подробно о тесте написано в отдельном посте.</p>
+<section id="решение" class="level1">
+<h1>Решение</h1>
+<p>1 этап - данные хранятся в файле <code>.docx</code> Можно работать с ними и так, однако, удобнее предварительно сохранить их в некотором текстовом формате файла. Поскольку записи о каждом отдельно взятом выезде хранятся в отдельной ячейке таблицы <code>Word</code>, то их можно последовательно сохранить разделив между собой разделителем – знаком или последовательностью знаков.</p>
 
 
 </section>

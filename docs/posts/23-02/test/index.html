@@ -129,6 +129,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#возврат-к-стартовому-слайду" id="toc-возврат-к-стартовому-слайду" class="nav-link" data-scroll-target="#возврат-к-стартовому-слайду">Возврат к стартовому слайду</a></li>
   <li><a href="#запрет-перехода" id="toc-запрет-перехода" class="nav-link" data-scroll-target="#запрет-перехода">Запрет перехода</a></li>
   </ul></li>
+  <li><a href="#материалы" id="toc-материалы" class="nav-link" data-scroll-target="#материалы">Материалы</a></li>
   </ul>
 </nav>
     </div>
@@ -305,19 +306,22 @@ If InStr(1, "C", ответ) &gt; 0 Then cnt_3 = cnt_3 + 1</code></pre>
 <pre><code>Public Sub TotalCounts()
 ' Итоговая функция
     ' Ответ №1:
-    If cnt_1 &gt; cnt_2 And cnt_1 &gt; cnt_3 Then
+    If cnt_1 &gt;= cnt_2 And cnt_1 &gt;= cnt_3 Then
         ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " &amp; _
             "Вам подходит деятельность Специалиста техносферной безопасности"
+        Exit Sub
     End If
     ' Ответ №2:
-    If cnt_2 &gt; cnt_1 And cnt_2 &gt; cnt_3 Then
+    If cnt_2 &gt;= cnt_1 And cnt_2 &gt;= cnt_3 Then
         ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " &amp; _
             "Вам подходит деятельность Инженера пожарной безопасности"
+        Exit Sub
     End If
     ' Ответ №3:
-    If cnt_3 &gt; cnt_2 And cnt_3 &gt; cnt_1 Then
+    If cnt_3 &gt;= cnt_2 And cnt_3 &gt;= cnt_1 Then
         ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " &amp; _
             "Вам подходит деятельность Судебного эксперта"
+        Exit Sub
     End If
 End Sub</code></pre>
 <p>В приведенном коде осуществляется проверка, того, какой из параметров по итогу тестирования имеет наибольший вес. В зависимости от этого в элементе с именем <code>результат</code> отображается соответствующий текст.</p>
@@ -354,9 +358,13 @@ End Sub</code></pre>
 <p>Наконец, стандартно слайды презентации листаются по клику на слайде. В данном случае такое поведение является нежелательным, т.к. тестируемый пользователь получит возможность перемещаться между слайдами не отвечая на вопросы.</p>
 <p>Для предотвращения этого следует снять флаг <code>По щелчку</code> предварительно выбрав в области навигации по презентации все слайды:</p>
 <p><img src="5-5.png" class="img-fluid"></p>
-
-
 </section>
+</section>
+<section id="материалы" class="level1">
+<h1>Материалы</h1>
+<p><a href="https://cloud.mail.ru/public/8ngj/HwyGhvsvL">Готовая презентация</a></p>
+
+
 </section>
 
 </main> <!-- /main -->

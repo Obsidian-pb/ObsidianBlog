@@ -3,7 +3,7 @@ title: "Создание тестов в PowerPoint"
 author: "Малютин О.С."
 date: "2023-02-10"
 categories: [2023 февраль, VBA]
-image: "index.png"
+image: "3-1.png"
 toc: true
 ---
 
@@ -180,19 +180,22 @@ If InStr(1, "C", ответ) > 0 Then cnt_3 = cnt_3 + 1
 Public Sub TotalCounts()
 ' Итоговая функция
     ' Ответ №1:
-    If cnt_1 > cnt_2 And cnt_1 > cnt_3 Then
+    If cnt_1 >= cnt_2 And cnt_1 >= cnt_3 Then
         ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " & _
             "Вам подходит деятельность Специалиста техносферной безопасности"
+        Exit Sub
     End If
     ' Ответ №2:
-    If cnt_2 > cnt_1 And cnt_2 > cnt_3 Then
+    If cnt_2 >= cnt_1 And cnt_2 >= cnt_3 Then
         ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " & _
             "Вам подходит деятельность Инженера пожарной безопасности"
+        Exit Sub
     End If
     ' Ответ №3:
-    If cnt_3 > cnt_2 And cnt_3 > cnt_1 Then
+    If cnt_3 >= cnt_2 And cnt_3 >= cnt_1 Then
         ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " & _
             "Вам подходит деятельность Судебного эксперта"
+        Exit Sub
     End If
 End Sub
 ```
@@ -242,3 +245,8 @@ End Sub
 Для предотвращения этого следует снять флаг `По щелчку` предварительно выбрав в области навигации по презентации все слайды:
 
 ![](5-5.png)
+
+
+# Материалы
+
+[Готовая презентация](https://cloud.mail.ru/public/8ngj/HwyGhvsvL)
