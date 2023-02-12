@@ -1,0 +1,53 @@
+---
+title: "12 февраля 2023"
+author: "Малютин О.С."
+date: "2023-02-12"
+categories: [ежедневно, 2023 февраль, данные]
+image: "index.jpg"
+toc: true
+---
+
+# Ежедневный отчет
+
+Воскресенье. Подготовка датасета по пожарам в Красноярске и изучение возможностей ChatGPT по помощи в работе.
+
+
+# Данные по пожарам
+
+Написал код на VBA для экспорта сырых (необработанных текстовых) данных из документов Word в промежуточный файл .txt.
+
+Написал код для получения датасета Pandas с сырыми дынными на Python.
+
+Начал писать код Python для обработки сырых данных на Python и формированию итогового датасета для работы.
+
+# ChatGPT
+
+Попутно начал активно использовать в работе ChatGPT. Оказалось, что это и впрямь чрезвычайно полезный инструмент который заметно сокращает время разработки.
+
+Например, я получил в ответ на запрос `Write Python code to load text from txt file and parse it to pandas DataFrame` такой ответ:
+
+```{python}
+#| eval: false
+import pandas as pd
+
+# Load text from txt file
+with open('data.txt', 'r') as f:
+    data = f.read()
+    
+# Parse text to pandas DataFrame    
+df = pd.DataFrame([x.split(',') for x in data.split('\n')])
+```
+
+А на запрос с просьбой написать необходимое для извлечения географических координат регулярное выражение -- `write regular expression in Python for extrude data like "59.234543" from string like "dhgdf hfhjf gg 59.234543, sfgfdsgds"`, был получен следующий ответ:
+
+```{python}
+import re
+
+re.findall(r'\d+\.\d+', 'dhgdf hfhjf gg 59.234543, sfgfdsgds')
+```
+
+Но самое удивительное произошло когда я попытался запросить парсинг исходных данных:
+
+![](index.jpg)
+
+ChatGPT не распарсил данные, однако он их описал(!).
