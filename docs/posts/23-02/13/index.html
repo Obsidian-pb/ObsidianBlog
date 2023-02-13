@@ -8,7 +8,7 @@
 
 <meta name="author" content="Малютин О.С.">
 
-<title>Игры и теория - 11 февраля 2023</title>
+<title>Игры и теория - 13 февраля 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,6 +59,9 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Найти"
   }
 }</script>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -105,9 +108,14 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#ежедневный-отчет" id="toc-ежедневный-отчет" class="nav-link active" data-scroll-target="#ежедневный-отчет">Ежедневный отчет</a></li>
-  <li><a href="#доработал-тест" id="toc-доработал-тест" class="nav-link" data-scroll-target="#доработал-тест">Доработал тест</a></li>
-  <li><a href="#база-знаний-сибпса" id="toc-база-знаний-сибпса" class="nav-link" data-scroll-target="#база-знаний-сибпса">База знаний СибПСА</a></li>
-  <li><a href="#формирование-датасета-по-выездам" id="toc-формирование-датасета-по-выездам" class="nav-link" data-scroll-target="#формирование-датасета-по-выездам">Формирование датасета по выездам</a></li>
+  <li><a href="#блок-1.-общая-работа" id="toc-блок-1.-общая-работа" class="nav-link" data-scroll-target="#блок-1.-общая-работа">Блок 1. Общая работа</a>
+  <ul class="collapse">
+  <li><a href="#показать-как-собирается-выставка" id="toc-показать-как-собирается-выставка" class="nav-link" data-scroll-target="#показать-как-собирается-выставка">Показать как собирается выставка</a></li>
+  </ul></li>
+  <li><a href="#расчет-красноярск" id="toc-расчет-красноярск" class="nav-link" data-scroll-target="#расчет-красноярск">2. Расчет Красноярск</a>
+  <ul class="collapse">
+  <li><a href="#оформление-рабочего-датасета" id="toc-оформление-рабочего-датасета" class="nav-link" data-scroll-target="#оформление-рабочего-датасета">Оформление рабочего датасета</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -116,10 +124,11 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">11 февраля 2023</h1>
+<h1 class="title">13 февраля 2023</h1>
   <div class="quarto-categories">
     <div class="quarto-category">ежедневно</div>
     <div class="quarto-category">2023 февраль</div>
+    <div class="quarto-category">данные</div>
   </div>
   </div>
 
@@ -137,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Дата публикации</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">11 февраля 2023 г.</p>
+      <p class="date">13 февраля 2023 г.</p>
     </div>
   </div>
   
@@ -149,37 +158,48 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="ежедневный-отчет" class="level1">
 <h1>Ежедневный отчет</h1>
-<p>Суббота. Доработка теста, размышления на тему создания базы знаний СибПСА, обработка данных по пожарам от ГУ МЧС России по КК</p>
+<p>Понедельник. Подготовка к выставке, проведение расчетов для Красноярска…</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">gantt
+    title Ход работы
+    dateFormat HH:mm
+    axisFormat %H:%M
+    section 1. Общие работа
+    Показать как собирается выставка        :a1, 09:00, 1.5h
+
+    section 2. Расчет Красноярск
+    Доделать экспорт данных в DataFrame           :b1, after  a1, 12:00
+    Доделать экспорт данных в DataFrame           :b2, 13:00, 17:30
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<!-- section Диссертация
+    План публикаций                 :d1, 13:30, 30m -->
 </section>
-<section id="доработал-тест" class="level1">
-<h1>Доработал тест</h1>
-<p>Выявил ошибку в логике.</p>
-<p>Было так:</p>
-<pre><code>If cnt_1 &gt; cnt_2 And cnt_1 &gt; cnt_3 Then
-    ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " &amp; _
-        "Вам подходит деятельность Специалиста техносферной безопасности"
-End If</code></pre>
-<p>Стало так:</p>
-<pre><code>If cnt_1 &gt;= cnt_2 And cnt_1 &gt;= cnt_3 Then
-    ActivePresentation.SlideShowWindow.View.Slide.Shapes("результат").TextFrame.TextRange.Text = "Судя по результатам, " &amp; _
-        "Вам подходит деятельность Специалиста техносферной безопасности"
-    Exit Sub
-End If</code></pre>
-<p>В первом варианте логика не всегда срабатывает. Например, в случае 10,10,8, она работать не будет.</p>
-<p>Второй тоже не идеален – каждый из возможных вариантов результата имеет преимущество в порядке 1 –&gt; 2 –&gt; 3, т. если варианты 1 и 2 будут иметь одинаковые баллы, выбран будет вариант 1.</p>
-<p>Плюс к тому немного изменил итоговые слайды с ответами.</p>
+<section id="блок-1.-общая-работа" class="level1">
+<h1>Блок 1. Общая работа</h1>
+<section id="показать-как-собирается-выставка" class="level2">
+<h2 class="anchored" data-anchor-id="показать-как-собирается-выставка">Показать как собирается выставка</h2>
+<p>Показал процесс сборки телевизионной стойки и фолдапа, для демонстрации в рамках выставки.</p>
 </section>
-<section id="база-знаний-сибпса" class="level1">
-<h1>База знаний СибПСА</h1>
-<p>В ходе работы над тестом пришел к выводу, что имеется насущная необходимость создания некоторого ресурса на котором размещались бы новые знания и решения получаемые в ходе работы – в первую очередь сотрудников НТЦ, в также всего состава академии. Такая база знаний Сибирской пожарно-спасательной академии. При этом здесь следовало бы выкладывать не научные результаты а именно практические, такие, которые могли бы быть использованы другими в своей работе в дальнейшем. Например, мы разработали тест, выложили подробное описание того как мы это сделали, и тогда в случае, если спустя какое то время кому то потребуется создать аналогичный тест, то вместо того, чтобы отвлекать нас от работы, он просто сможет взять данное описание и на его основе создать тест самостоятельно.</p>
 </section>
-<section id="формирование-датасета-по-выездам" class="level1">
-<h1>Формирование датасета по выездам</h1>
-<p>ГУ МЧС России по КК предоставило данные в структурированном текстовом формате. Для их использования следует перевести данные в формат датасета.</p>
-<p>Исходные данные имеют следующий вид:</p>
-<p><img src="data_raw.png" class="img-fluid"></p>
+<section id="расчет-красноярск" class="level1">
+<h1>2. Расчет Красноярск</h1>
+<section id="оформление-рабочего-датасета" class="level2">
+<h2 class="anchored" data-anchor-id="оформление-рабочего-датасета">Оформление рабочего датасета</h2>
+<p>При помощи инструментов Python сформировать датасет с пожарами за 2020-2022 годы.</p>
+<p>Почти закончил, осталось только найти координаты для 1000 записей - для них в полученных данных не было сведений о координатах. Это где-то около 1/6 части всех записей.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
