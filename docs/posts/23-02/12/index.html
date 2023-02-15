@@ -8,7 +8,7 @@
 
 <meta name="author" content="Малютин О.С.">
 
-<title>Игры и теория - 4 февраля 2023</title>
+<title>Игры и теория - 12 февраля 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,15 +122,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Найти"
   }
 }</script>
-<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -165,19 +162,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#ежедневный-отчет" id="toc-ежедневный-отчет" class="nav-link active" data-scroll-target="#ежедневный-отчет">Ежедневный отчет</a></li>
+  <li><a href="#данные-по-пожарам" id="toc-данные-по-пожарам" class="nav-link" data-scroll-target="#данные-по-пожарам">Данные по пожарам</a></li>
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt">ChatGPT</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">4 февраля 2023</h1>
+<h1 class="title">12 февраля 2023</h1>
   <div class="quarto-categories">
     <div class="quarto-category">ежедневно</div>
     <div class="quarto-category">2023 февраль</div>
-    <div class="quarto-category">mermaid</div>
-    <div class="quarto-category">quarto</div>
-    <div class="quarto-category">genesis</div>
+    <div class="quarto-category">данные</div>
   </div>
   </div>
 
@@ -195,7 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Дата публикации</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">4 февраля 2023 г.</p>
+      <p class="date">12 февраля 2023 г.</p>
     </div>
   </div>
   
@@ -207,83 +212,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="ежедневный-отчет" class="level1">
 <h1>Ежедневный отчет</h1>
-<section id="обстановка" class="level2">
-<h2 class="anchored" data-anchor-id="обстановка">Обстановка</h2>
-<p>4 февраля 2023, суббота.</p>
+<p>Воскресенье. Подготовка датасета по пожарам в Красноярске и изучение возможностей ChatGPT по помощи в работе.</p>
 </section>
-<section id="получение-графа-из-слоя-qgis" class="level2">
-<h2 class="anchored" data-anchor-id="получение-графа-из-слоя-qgis">Получение графа из слоя QGIS</h2>
-<p>Пытался программно, при помощи Python получить граф из слоя QGIS. Это нужно для того, чтобы иметь возможность проводить расчеты для дорог нарисованных непосредственно на карте. pyQGIS располагает такими инстурментами но пока непонятно как они работают.</p>
-<p>Код смотрел в документации – https://qgis.lt/docs/pyqgis_developer_cookbook/network_analysis.html</p>
+<section id="данные-по-пожарам" class="level1">
+<h1>Данные по пожарам</h1>
+<p>Написал код на VBA для экспорта сырых (необработанных текстовых) данных из документов Word в промежуточный файл .txt.</p>
+<p>Написал код для получения датасета Pandas с сырыми дынными на Python.</p>
+<p>Начал писать код Python для обработки сырых данных на Python и формированию итогового датасета для работы.</p>
+</section>
+<section id="chatgpt" class="level1">
+<h1>ChatGPT</h1>
+<p>Попутно начал активно использовать в работе ChatGPT. Оказалось, что это и впрямь чрезвычайно полезный инструмент который заметно сокращает время разработки.</p>
+<p>Например, я получил в ответ на запрос <code>Write Python code to load text from txt file and parse it to pandas DataFrame</code> такой ответ:</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qgis.core <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qgis.gui <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qgis.analysis <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qgis.PyQt.QtCore <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qgis.PyQt.QtGui <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>vectorLayer <span class="op">=</span> QgsVectorLayer(<span class="st">'testdata/network.gpkg|layername=network_lines'</span>, <span class="st">'lines'</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>director <span class="op">=</span> QgsVectorLayerDirector(vectorLayer, <span class="op">-</span><span class="dv">1</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, QgsVectorLayerDirector.DirectionBoth)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>strategy <span class="op">=</span> QgsNetworkDistanceStrategy()</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>director.addStrategy(strategy)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>builder <span class="op">=</span> QgsGraphBuilder(vectorLayer.crs())</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>pStart <span class="op">=</span> QgsPointXY(<span class="fl">1179661.925139</span>,<span class="fl">5419188.074362</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>tiedPoint <span class="op">=</span> director.makeGraph(builder, [pStart])</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>pStart <span class="op">=</span> tiedPoint[<span class="dv">0</span>]</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>graph <span class="op">=</span> builder.graph()</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>idStart <span class="op">=</span> graph.findVertex(pStart)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>tree <span class="op">=</span> QgsGraphAnalyzer.shortestTree(graph, idStart, <span class="dv">0</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="op">&lt;</span> tree.edgeCount()):</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  rb <span class="op">=</span> QgsRubberBand(iface.mapCanvas())</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  rb.setColor (Qt.red)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  rb.addPoint (tree.vertex(tree.edge(i).fromVertex()).point())</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  rb.addPoint (tree.vertex(tree.edge(i).toVertex()).point())</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span></code><button title="Скопировать текст" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load text from txt file</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'data.txt'</span>, <span class="st">'r'</span>) <span class="im">as</span> f:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> f.read()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse text to pandas DataFrame    </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame([x.split(<span class="st">','</span>) <span class="cf">for</span> x <span class="kw">in</span> data.split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)])</span></code><button title="Скопировать текст" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Однако почему-то не работет. Возможные причины:</p>
-<ol type="1">
-<li>Не правильно читается файл geopackge</li>
-<li>Нужно как-то по другому указывать координаты стартовой точки (а может быть вообще можно обойтись без нее)</li>
-</ol>
-<p>Думаю нужно попробовать продолжить в отдельном редакторе Python (не в среде QGIS), а то я даже посмотреть не могу какие данные получены.</p>
-</section>
-<section id="репозиторий-библиотеки-genesis" class="level2">
-<h2 class="anchored" data-anchor-id="репозиторий-библиотеки-genesis">Репозиторий библиотеки genesis</h2>
-<p>Завел специальный приватный репозиторий для проекта библиотеки genesis. Эта библиотека позволит объединить все подходы к определению пространственных параметров пожарно-спасательных подразделений.</p>
-</section>
-<section id="инструменты-mermaid" class="level2">
-<h2 class="anchored" data-anchor-id="инструменты-mermaid">Инструменты Mermaid</h2>
-<p>Уже под конец дня неожиданно открыл для себя библиотеку (авторы пишут просто - tool) Mermaid. Она встроена в Quarto, я и раньше видел ее, но сегодня немного глубже копнул и обнаружил, что она очень многое может. Например такое:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">gantt
-    title A Gantt Diagram
-    dateFormat  YYYY-MM-DD
-    section Блок 1
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 10d
-    section Блок 2
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
-</div>
-<p></p>
+<p>А на запрос с просьбой написать необходимое для извлечения географических координат регулярное выражение – <code>write regular expression in Python for extrude data like "59.234543" from string like "dhgdf hfhjf gg 59.234543, sfgfdsgds"</code>, был получен следующий ответ:</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>re.findall(<span class="vs">r'\d+\.\d+'</span>, <span class="st">'dhgdf hfhjf gg 59.234543, sfgfdsgds'</span>)</span></code><button title="Скопировать текст" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>['59.234543']</code></pre>
 </div>
 </div>
-</div>
+<p>Но самое удивительное произошло когда я попытался запросить парсинг исходных данных:</p>
+<p><img src="index.jpg" class="img-fluid"></p>
+<p>ChatGPT не распарсил данные, однако он их описал(!).</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

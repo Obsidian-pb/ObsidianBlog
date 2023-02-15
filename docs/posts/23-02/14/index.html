@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Малютин О.С.">
+
+<title>Игры и теория - 14 февраля 2023</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Поиск не дал результатов",
+    "search-matching-documents-text": "Результаты поиска",
+    "search-copy-link-title": "Скопировать ссылку",
+    "search-hide-matches-text": "Скрыть дополнительные результаты",
+    "search-more-match-text": "дополнительный результат в этом документе",
+    "search-more-matches-text": "дополнительных результата(-ов) в этом документе",
+    "search-clear-button-title": "Очистить",
+    "search-detached-cancel-button-title": "Отменить",
+    "search-submit-button-title": "Найти"
+  }
+}</script>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Игры и теория</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html">
+ <span class="menu-text">О блоге</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Obsidian-pb/ObsidianBlog"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#ежедневный-отчет" id="toc-ежедневный-отчет" class="nav-link active" data-scroll-target="#ежедневный-отчет">Ежедневный отчет</a></li>
+  <li><a href="#блок-1.-общая-работа" id="toc-блок-1.-общая-работа" class="nav-link" data-scroll-target="#блок-1.-общая-работа">Блок 1. Общая работа</a>
+  <ul class="collapse">
+  <li><a href="#план-на-завтра" id="toc-план-на-завтра" class="nav-link" data-scroll-target="#план-на-завтра">План на завтра</a></li>
+  </ul></li>
+  <li><a href="#расчет-красноярск" id="toc-расчет-красноярск" class="nav-link" data-scroll-target="#расчет-красноярск">2. Расчет Красноярск</a>
+  <ul class="collapse">
+  <li><a href="#оформление-рабочего-датасета" id="toc-оформление-рабочего-датасета" class="nav-link" data-scroll-target="#оформление-рабочего-датасета">Оформление рабочего датасета</a></li>
+  <li><a href="#предварительные-расчеты" id="toc-предварительные-расчеты" class="nav-link" data-scroll-target="#предварительные-расчеты">Предварительные расчеты</a>
+  <ul class="collapse">
+  <li><a href="#сравнение-показателей-до-и-после-расчета" id="toc-сравнение-показателей-до-и-после-расчета" class="nav-link" data-scroll-target="#сравнение-показателей-до-и-после-расчета">Сравнение показателей до и после расчета</a></li>
+  <li><a href="#предварительный-итог-расчета" id="toc-предварительный-итог-расчета" class="nav-link" data-scroll-target="#предварительный-итог-расчета">Предварительный итог расчета</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">14 февраля 2023</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ежедневно</div>
+    <div class="quarto-category">2023 февраль</div>
+    <div class="quarto-category">данные</div>
+    <div class="quarto-category">ПСЧ</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Автор</div>
+    <div class="quarto-title-meta-contents">
+             <p>Малютин О.С. </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Дата публикации</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">14 февраля 2023 г.</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="ежедневный-отчет" class="level1">
+<h1>Ежедневный отчет</h1>
+<p>Вторник. Расчеты для Красноярска</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">gantt
+    title Ход работы
+    dateFormat HH:mm
+    axisFormat %H:%M
+
+    section 1. Общая работа
+    Подведение итогов, планирование         :a1, 17:00, 30m
+
+    section 1. Расчет Красноярск
+    Окончательная сборка Датасета           :b1, 08:30, 1h
+    Оформление карты Красноярска           :b2, after b1, 12:20
+    Оформление расчетного ноутбука          :b3, 13:30, 14:00
+    Проведение расчетов                     :b4, 14:00, 15:30
+    Отладка кода ноутбуков                  :b5, 14:30, 15:15
+    Визуализация результатов расчетов       :b6, after b4, 17:00
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="блок-1.-общая-работа" class="level1">
+<h1>Блок 1. Общая работа</h1>
+<section id="план-на-завтра" class="level2">
+<h2 class="anchored" data-anchor-id="план-на-завтра">План на завтра</h2>
+<ol type="1">
+<li>Оформить таблицу для заполнения на участников тренировки по учениям в Емельяново и направить для заполнения.</li>
+<li>Начать писать отчет по расчету для Красноярска</li>
+<li>Начать отчет по работе отдела за 2022 год</li>
+<li>Изучить методические рекомендации по учениям Арктика 2023</li>
+</ol>
+</section>
+</section>
+<section id="расчет-красноярск" class="level1">
+<h1>2. Расчет Красноярск</h1>
+<section id="оформление-рабочего-датасета" class="level2">
+<h2 class="anchored" data-anchor-id="оформление-рабочего-датасета">Оформление рабочего датасета</h2>
+<p>Получен итоговый датасет по пожарам в Красноярске за 2020-2022 годы. Пришлось изрядно потрудиться вытаскивая данные из текстового вида. Ход работы такой:</p>
+<ol type="1">
+<li>Сохранить данные из файлов <code>Word</code> в текстовый файл - без обработки, просто полностью вынести для последующей работы средствами Python</li>
+<li>Сформировать DataFrame из сырых данных - просто разобрать данные из текстового файла по записям и сохранить в виде <code>csv</code>. Записями DataFrame являются записи о пожарах, столбцами - отдельные блоки информации, согласно разделению в исходном файле: <img src="1.png" class="img-fluid"></li>
+<li>Произвести парсинг данных - выбрать из записей значимые для анализа данные. В данном случае, были выбраны следующие данные:
+<ul>
+<li>дата пожара</li>
+<li>район</li>
+<li>адрес</li>
+<li>координаты</li>
+<li>район выезда</li>
+<li>объект</li>
+<li>площадь пожара</li>
+<li>временные показатели</li>
+<li>ранг пожара</li>
+<li>погибло</li>
+<li>пострадало</li>
+<li>привлекалось человек</li>
+<li>АЦ</li>
+<li>АЛ</li>
+</ul></li>
+<li>Изменить типы данных в соответствии с хранящейся информацией. Это требуется для удобства работы и уменьшения размера итогового файла</li>
+<li>Обогатить данные. В данном случае нам дополнительно потребовались следующие сведения: <code>скорость следования пожарных подразделений</code>, <code>время следования подразделений</code></li>
+<li>Для более чем 100 записей не были указаны географические координаты, поэтому для них была произведена процедура геокодирования</li>
+<li>В заключение был подготовлен файл <code>gpkg</code></li>
+<li>Произведена окончательная очистка данных - были отброшены данные выходившие за пределы города Красноярска <img src="fires_out_bounds_1.png" class="img-fluid"></li>
+</ol>
+<p>Итоговый датасет составил 4112 записей о выездах на пожары и загорания. Это 66% от исходного набора. Прочие записи были утрачены в связи с невозможностью их интерпретации в связи с отсутствующими или испорченными данными в рассматриваемых фичах.</p>
+<p><img src="heatmap.png" class="img-fluid"></p>
+</section>
+<section id="предварительные-расчеты" class="level2">
+<h2 class="anchored" data-anchor-id="предварительные-расчеты">Предварительные расчеты</h2>
+<p>Предварительные расчеты были произведены с использованием библиотеки FUDO полученной в ходе прошлогодней работы.</p>
+<p>Для расчета использовался граф дорожной сети (ГДС) Красноярска.</p>
+<p>Расчет проводился на основе известных данных о дислокации пожарных подразделений. Цель расчета – определить наилучшие места размещения 5 новых пожарных подразделений.</p>
+<p>Расчет производился для средней скорости следования <code>35 км/ч</code>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Уведомление
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Требуется уточнить реальные средние скорости следования пожарных автомобилей в г. Красноярске.</p>
+</div>
+</div>
+<section id="сравнение-показателей-до-и-после-расчета" class="level3">
+<h3 class="anchored" data-anchor-id="сравнение-показателей-до-и-после-расчета">Сравнение показателей до и после расчета</h3>
+<p><img src="before_gr.png" id="fig-before-gr" class="img-fluid"></p>
+<p><img src="after_gr.png" id="fig-after-gr" class="img-fluid"></p>
+</section>
+<section id="предварительный-итог-расчета" class="level3">
+<h3 class="anchored" data-anchor-id="предварительный-итог-расчета">Предварительный итог расчета</h3>
+<p><img src="itog.png" class="img-fluid"></p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Скопировано");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Скопировано");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
