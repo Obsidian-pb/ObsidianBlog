@@ -3,7 +3,7 @@ title: "15 февраля 2023"
 author: "Малютин О.С."
 date: "2023-02-15"
 categories: [ежедневно, 2023 февраль, ПСЧ]
-image: "itog.png"
+image: "density.png"
 toc: true
 ---
 
@@ -43,11 +43,11 @@ gantt
 
 Параметры вызова следующие:
 
-![Параметры вызова инструмента](tarr_time_fields.png){#fig-tarr-time-fields}
+![Параметры вызова инструмента](settings_slider.png){#fig-settings-slider}
 
 Ркзультат:
 
-![Результат применения к точечному слою с пожарами](settings_slider.png){#fig-settings-slider}
+![Результат применения к точечному слою с пожарами](tarr_time_fields.png){#fig-tarr-time-fields}
 
 ## Расчет плотности пожаров
 
