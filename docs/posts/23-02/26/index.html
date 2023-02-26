@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Малютин О.С.">
 
-<title>Игры и теория - 20 февраля 2023</title>
+<title>Игры и теория - 26 февраля 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,9 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Найти"
   }
 }</script>
-<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -84,13 +81,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html">
- <span class="menu-text">О блоге</span></a>
+    <a class="nav-link" href="../../../about.html">О блоге</a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Obsidian-pb/ObsidianBlog"><i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ </a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -108,6 +104,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#ежедневный-отчет" id="toc-ежедневный-отчет" class="nav-link active" data-scroll-target="#ежедневный-отчет">Ежедневный отчет</a></li>
+  <li><a href="#импорт-слоя-гдс-инструментами-qgis" id="toc-импорт-слоя-гдс-инструментами-qgis" class="nav-link" data-scroll-target="#импорт-слоя-гдс-инструментами-qgis">Импорт слоя ГДС инструментами QGIS</a>
+  <ul class="collapse">
+  <li><a href="#замечания" id="toc-замечания" class="nav-link" data-scroll-target="#замечания">Замечания</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">20 февраля 2023</h1>
+<h1 class="title">26 февраля 2023</h1>
   <div class="quarto-categories">
     <div class="quarto-category">ежедневно</div>
     <div class="quarto-category">2023 февраль</div>
@@ -137,10 +137,9 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Дата публикации</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">20 февраля 2023 г.</p>
+      <p class="date">26 февраля 2023 г.</p>
     </div>
   </div>
-  
     
   </div>
   
@@ -149,39 +148,64 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="ежедневный-отчет" class="level1">
 <h1>Ежедневный отчет</h1>
-<p>Понедельник. Визит Газпром, отчет, методика учений.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">gantt
-    title Ход работы
-    dateFormat HH:mm
-    axisFormat %H:%M
-
-   
-    section 1. Общие вопросы
-    Обсудить с руководством ход работы                      :b0, 09:00, 20m
-    Подготовиться к визиту Газпром                              :b1, 10:20, 40m
-    Записать видео для Красноярского отряда                 :b2, 10:00, 20m
-    Отправить карту к расчету в ОПО-1                       :b3, 09:40, 20m
-    Написать рапорт на автомобили                           :b4, 11:20, 10m
-    Исправить методику                                      :b5, 11:30, 30m
-    Составить итоговый список на учения                     :b6, 13:00, 20m
-    Написать отчет отдела                                   :b7, after b9, 2h
-    Представить разработки представителям Газпром           :b8, 16:00, 30m
-    Написать заявку на автомобили на 28 февраля                 :b9, after b6, 30m
-
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
+<p>Воскресенье. Импорт слоя ГДС инструментами QGIS.</p>
+</section>
+<section id="импорт-слоя-гдс-инструментами-qgis" class="level1">
+<h1>Импорт слоя ГДС инструментами QGIS</h1>
+<p>Следующий код позволяет импортировать данные о графе дорожной сети из слоя geopackage средствами QGIS (библиотеки <code>qgis.core</code>)</p>
+<pre><code>#%%  Загрузка библиотек QGIS
+from qgis.core import *
+from qgis.gui import *
+from qgis.analysis import *
+from qgis.PyQt.QtCore import *
+from qgis.PyQt.QtGui import *
 
 
+#%%  Загрузка слоя ГДС
+vectorLayer = QgsVectorLayer('D:/QGIS/gds_test/data/rng.gpkg', 'memory')
+print("crs", vectorLayer.crs())
+director = QgsVectorLayerDirector(vectorLayer, -1, '', '', '', QgsVectorLayerDirector.DirectionBoth)
+strategy = QgsNetworkDistanceStrategy()
+director.addStrategy(strategy)
+builder = QgsGraphBuilder(vectorLayer.crs())
+
+
+pStart = QgsPointXY(532970.7, 6234322.6)
+tiedPoint = director.makeGraph(builder, [pStart])
+pStart = tiedPoint[0]
+
+graph = builder.graph()
+
+idStart = graph.findVertex(pStart)
+print("idStart", idStart)
+
+tree = QgsGraphAnalyzer.shortestTree(graph, idStart, 0)
+print("ребер в ГДС", tree.edgeCount())
+
+i = 0
+while (i &lt; tree.edgeCount()):
+  print(f"ребро {i}")
+  print(tree.vertex(tree.edge(i).fromVertex()).point())
+  print(tree.vertex(tree.edge(i).toVertex()).point())
+  i = i + 1</code></pre>
+<section id="замечания" class="level2">
+<h2 class="anchored" data-anchor-id="замечания">Замечания</h2>
+<ol type="1">
+<li><p>Для использования следует установить библиотеки QGIS <code>qgis.core</code>.</p></li>
+<li><p>Слой графа дорожной сети на карте должен быть составлен таким образом, чтобы вершины линий соединялись между собой.</p></li>
+</ol>
+<p><img src="index.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>Найти координаты точки для начала расчета графа можно в свойствах линий:</li>
+</ol>
+<p><img src="points.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li><p>Подробнее о загрузке векторных слоев: <a href="https://qgis.lt/docs/pyqgis_developer_cookbook/vector.html" class="uri">https://qgis.lt/docs/pyqgis_developer_cookbook/vector.html</a></p></li>
+<li><p>Подробнее о загрузке графа дорожной сети: <a href="https://qgis.lt/docs/pyqgis_developer_cookbook/network_analysis.html" class="uri">https://qgis.lt/docs/pyqgis_developer_cookbook/network_analysis.html</a></p></li>
+</ol>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -226,24 +250,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Скопировано");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Скопировано");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
     setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -279,42 +286,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
       });
-    }
+      return popup.innerHTML;
+    });
   }
 });
 </script>

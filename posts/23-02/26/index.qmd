@@ -1,0 +1,73 @@
+---
+title: "26 февраля 2023"
+author: "Малютин О.С."
+date: "2023-02-26"
+categories: [ежедневно, 2023 февраль]
+image: "index.png"
+toc: true
+---
+
+
+
+# Ежедневный отчет
+
+Воскресенье. Импорт слоя ГДС инструментами QGIS.
+
+
+# Импорт слоя ГДС инструментами QGIS
+
+Следующий код позволяет импортировать данные о графе дорожной сети из слоя geopackage средствами QGIS (библиотеки `qgis.core`)
+
+```
+#%%  Загрузка библиотек QGIS
+from qgis.core import *
+from qgis.gui import *
+from qgis.analysis import *
+from qgis.PyQt.QtCore import *
+from qgis.PyQt.QtGui import *
+
+
+#%%  Загрузка слоя ГДС
+vectorLayer = QgsVectorLayer('D:/QGIS/gds_test/data/rng.gpkg', 'memory')
+print("crs", vectorLayer.crs())
+director = QgsVectorLayerDirector(vectorLayer, -1, '', '', '', QgsVectorLayerDirector.DirectionBoth)
+strategy = QgsNetworkDistanceStrategy()
+director.addStrategy(strategy)
+builder = QgsGraphBuilder(vectorLayer.crs())
+
+
+pStart = QgsPointXY(532970.7, 6234322.6)
+tiedPoint = director.makeGraph(builder, [pStart])
+pStart = tiedPoint[0]
+
+graph = builder.graph()
+
+idStart = graph.findVertex(pStart)
+print("idStart", idStart)
+
+tree = QgsGraphAnalyzer.shortestTree(graph, idStart, 0)
+print("ребер в ГДС", tree.edgeCount())
+
+i = 0
+while (i < tree.edgeCount()):
+  print(f"ребро {i}")
+  print(tree.vertex(tree.edge(i).fromVertex()).point())
+  print(tree.vertex(tree.edge(i).toVertex()).point())
+  i = i + 1
+```
+
+## Замечания
+
+1. Для использования следует установить библиотеки QGIS `qgis.core`.
+
+2. Слой графа дорожной сети на карте должен быть составлен таким образом, чтобы вершины линий соединялись между собой.
+
+![](index.png)
+
+3. Найти координаты точки для начала расчета графа можно в свойствах линий:
+
+![](points.png)
+
+4. Подробнее о загрузке векторных слоев: <https://qgis.lt/docs/pyqgis_developer_cookbook/vector.html>
+
+5. Подробнее о загрузке графа дорожной сети: <https://qgis.lt/docs/pyqgis_developer_cookbook/network_analysis.html>

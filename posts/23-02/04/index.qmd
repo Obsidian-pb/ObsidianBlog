@@ -2,7 +2,7 @@
 title: "4 февраля 2023"
 author: "Малютин О.С."
 date: "2023-02-04"
-categories: [ежедневно, 2023 февраль, mermaid, quarto, genesis]
+categories: [ежедневно, 2023 февраль, mermaid, quarto, genesis, qgis]
 image: "index.png"
 # execute:
 #   eval: false
