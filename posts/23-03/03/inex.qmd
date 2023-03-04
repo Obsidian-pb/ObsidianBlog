@@ -3,7 +3,7 @@ title: "3 марта 2023"
 author: "Малютин О.С."
 date: "2023-03-03"
 categories: [ежедневно, 2023 март, НИР Дислокация]
-image: "index.png"
+image: "losts.png"
 toc: true
 ---
 

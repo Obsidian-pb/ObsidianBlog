@@ -1,0 +1,157 @@
+---
+title: "4 марта 2023"
+author: "Малютин О.С."
+date: "2023-03-04"
+categories: [ежедневно, 2023 март, данные]
+image: "index.png"
+toc: true
+---
+
+
+
+# Ежедневный отчет
+
+Суббота. 
+
+
+```{mermaid}
+gantt
+    title Ход работы
+    dateFormat HH:mm
+    axisFormat %H:%M
+   
+    section Общие вопросы
+    Оценить распределение количество пожаров со спасенными                                 :a0, 08:30, 15m
+
+    section НИР Дислокация
+    Подготовить письмо по НИР в ГУПО             :b1, 09:00, 1h
+    Протестировать получение ГДС из QGIS        :b2, 15:00, 30m
+```
+
+# Общие вопросы
+
+## Оценить распределение количество пожаров со спасенными
+
+В продолжение вчерашнего размышления на тему того, сколько людей спасается в зависимости от времени прибытия, проанализировал статистику по Красноярску:
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df_full_free = pd.read_csv(r'D:\Git\Statpozh_description\Krsk\krsk_fires.csv')
+
+upper = 20      # Макс минут
+
+# кол-во пожаров на которых были спасены люди
+saved_per_dtArrival_minute = df_full_free[df_full_free['f56']>0].groupby('dtArrival')['f56'].count()[:upper]
+
+saved_total = saved_per_dtArrival_minute.sum()
+print(f"Всего пожаров, до {upper} минут, где спасены люди", saved_total)
+saved_per_dtArrival_minute_perc = round(saved_per_dtArrival_minute/saved_total,2)
+
+# кол-во пожаров на которых погибли люди
+lost_per_dtArrival_minute = df_full_free[df_full_free['f27']>0].groupby('dtArrival')['f27'].count()[:upper]
+lost_total = lost_per_dtArrival_minute.sum()
+print(f"Всего пожаров, до {upper} минут, где погибли люди", lost_total)
+lost_per_dtArrival_minute_perc = round(lost_per_dtArrival_minute/lost_total,2)
+
+plt.style.use('default')
+fig, ax = plt.subplots(figsize=(8,6))
+
+ax.plot(saved_per_dtArrival_minute_perc,   
+                    color='g', 
+                    label='спасение')
+ax.plot(lost_per_dtArrival_minute_perc,   
+                    color='r', 
+                    label='гибель')
+
+ax.set_xlabel('Время прибытия, мин')
+ax.set_ylabel('Доля от общего количества выездов где были спасены люди, %')
+ax.set_title('Распределение пожаров на которых были спасены люди')
+ax.legend()
+
+plt.show()
+```
+
+Судя по полученному графику, действительно наибольшее количество пожаров на которых были спасены люди приходится на первые 10 минут прибытия. Однако это по-прежнему спорный вывод, так как доля пожаров от общего количество вполне очевидно связана с общим количеством пожаров, которых в первые 10 заметно больше. Поэтому следует каким то образом нормализовать график. Например связать долю пожаров с гибелью в определенную минуту прибытия с общим количеством пожаров в данную минуту. Или привести к общей шкале...
+
+```{python}
+upper = 60      # Макс минут
+
+# Общее количество пожаров
+fires_per_dtArrival_minute = df_full_free.groupby('dtArrival')['f56'].count()[:upper]
+fires_total = fires_per_dtArrival_minute.sum()
+print(f"Всего пожаров, до {upper} минут", fires_total)
+
+# кол-во пожаров на которых были спасены люди
+saved_per_dtArrival_minute = df_full_free[df_full_free['f56']>0].groupby('dtArrival')['f56'].count()[:upper]
+
+saved_total = saved_per_dtArrival_minute.sum()
+print(f"Всего пожаров, до {upper} минут, где спасены люди", saved_total)
+saved_per_dtArrival_minute_perc = round(saved_per_dtArrival_minute/fires_per_dtArrival_minute,4)
+
+# кол-во пожаров на которых погибли люди
+lost_per_dtArrival_minute = df_full_free[df_full_free['f27']>0].groupby('dtArrival')['f27'].count()[:upper]
+lost_total = lost_per_dtArrival_minute.sum()
+print(f"Всего пожаров, до {upper} минут, где погибли люди", lost_total)
+lost_per_dtArrival_minute_perc = round(lost_per_dtArrival_minute/fires_per_dtArrival_minute,4)
+
+plt.style.use('default')
+fig, ax = plt.subplots(figsize=(8,6))
+
+ax.plot(saved_per_dtArrival_minute_perc,   
+                    color='g', 
+                    label='спасено')
+ax.plot(lost_per_dtArrival_minute_perc,   
+                    color='r', 
+                    label='гибель')
+
+ax.set_xlabel('Время прибытия, мин')
+ax.set_ylabel('Доля от общего количества выездов где были спасены люди, %')
+ax.set_title('Распределение пожаров на которых были спасены люди')
+ax.legend()
+
+plt.show()
+```
+
+# НИР Дислокация
+
+## Протестировать получение ГДС из QGIS
+
+Код загрузки графа:
+
+```{python}
+#| eval: false
+from qgis.core import *
+from qgis.gui import *
+from qgis.analysis import *
+from qgis.PyQt.QtCore import *
+from qgis.PyQt.QtGui import *
+
+# Тест крупного графа (на примере Железногорска)
+vectorLayer = QgsVectorLayer('rng.gpkg|layername=edges', 'memory')
+
+if not vectorLayer.isValid():
+    print("Layer failed to load!")
+else:
+    print("crs", vectorLayer.crs())
+    director = QgsVectorLayerDirector(vectorLayer, -1, '', '', '', QgsVectorLayerDirector.DirectionBoth)
+    strategy = QgsNetworkDistanceStrategy()
+    director.addStrategy(strategy)
+    builder = QgsGraphBuilder(vectorLayer.crs())
+
+
+    pStart = QgsPointXY(532970.7, 6234322.6)
+    tiedPoint = director.makeGraph(builder, [pStart])
+    pStart = tiedPoint[0]
+
+    graph = builder.graph()
+
+    idStart = graph.findVertex(pStart)
+    print("idStart", idStart)
+
+    tree = QgsGraphAnalyzer.shortestTree(graph, idStart, 0)
+    print("ребер в ГДС", tree.edgeCount())
+```
+
+В целом граф загружается довольно быстро. Во всяком случае, для Железногорска заметного объема времени не требуется. Потребовалось 1.28 сек.
