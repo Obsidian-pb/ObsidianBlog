@@ -120,7 +120,7 @@ plt.show()
 
 Код загрузки графа:
 
-```{python}
+```python
 #| eval: false
 from qgis.core import *
 from qgis.gui import *
