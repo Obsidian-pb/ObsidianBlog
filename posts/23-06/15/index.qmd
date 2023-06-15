@@ -1,0 +1,31 @@
+---
+title: "16 марта 2023"
+author: "Малютин О.С."
+date: "2023-03-16"
+categories: [ежедневно, 2023 март]
+image: "index.png"
+toc: true
+filters:
+  - preview-colour
+---
+
+# Ежедневный отчет
+
+Четверг.
+
+## Тест надстройки для Qurto
+
+**Preview Colour Extension For Quarto**
+
+<https://github.com/mcanouil/quarto-preview-colour>
+
+### Пример
+
+The `#b22222` colour is a dark red colour, also known as firebrick.
+It is a web safe colour.
+The #b22222 colour hex could be obtained by blending #ff4444 with #640000.
+Closest websafe colour is: #cc3333.
+
+```{.r}
+my_colour <- "#b22222"
+```
