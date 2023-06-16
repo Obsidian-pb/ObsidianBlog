@@ -2,7 +2,7 @@
 title: "16 марта 2023"
 author: "Малютин О.С."
 date: "2023-03-16"
-categories: [ежедневно, 2023 март]
+categories: [ежедневно, 2023 июнь, Quarto]
 image: "index.png"
 toc: true
 filters:
