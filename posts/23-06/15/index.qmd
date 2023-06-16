@@ -7,6 +7,9 @@ image: "index.png"
 toc: true
 filters:
   - preview-colour
+preview-colour:
+  code: true
+  text: true
 ---
 
 # Ежедневный отчет
